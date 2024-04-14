@@ -70,6 +70,7 @@ const Main = () => {
                   </div>
                 </div>
 
+            
                 <div className="cards__item">
                   <div className="cards__card card">
                     <div className="card__group">
