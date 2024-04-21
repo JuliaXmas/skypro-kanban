@@ -17,7 +17,7 @@ function App() {
       topic: "Web Design",
       title: "ToDo",
       date: new Date().toLocaleDateString(),
-      status: statusList[1],
+      status: statusList[0],
     };
     setCards([...cards, newCard]);
   };
