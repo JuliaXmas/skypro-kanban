@@ -1,11 +1,11 @@
 // eslint-disable-next-line react/prop-types
-const Card = ({ status, title, date }) => {
+const Card = ({ topic, title, date }) => {
   return (
     <div className="cards__item">
       <div className="cards__card card">
         <div className="card__group">
           <div className="card__theme _green">
-            <p className="_green">{status}</p>
+            <p className="_green">{topic}</p>
           </div>
           <a href="#popBrowse" target="_self">
             <div className="card__btn">
