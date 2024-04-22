@@ -1,4 +1,4 @@
-import Card from "./Card";
+import Card from "../Card/Card.jsx";
 
 // eslint-disable-next-line react/prop-types
 const Column = ({ title, cardList }) => {

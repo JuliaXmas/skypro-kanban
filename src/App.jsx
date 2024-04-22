@@ -1,9 +1,9 @@
 import "./App.css";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import BrowsePopup from "./components/popups/Browse";
-import ExitPopup from "./components/popups/Exit";
-import NewCardPopup from "./components/popups/NewCard";
+import Header from "./components/Header/Header.jsx";
+import Main from "./components/Main/Main.jsx";
+import BrowsePopup from "./components/popups/Browse/Browse.jsx";
+import ExitPopup from "./components/popups/Exit/Exit.jsx";
+import NewCardPopup from "./components/popups/NewCard/NewCard.jsx";
 import { useState, useEffect } from "react";
 import { cardList, statusList } from "./data";
 
