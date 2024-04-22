@@ -1,6 +1,6 @@
 import DropDownUserSet from "../DropDown/DropDown.jsx";
 
-const Header = () => {
+const Header = ({ addCard }) => {
   return (
     <header className="header">
       <div className="container">
@@ -16,7 +16,11 @@ const Header = () => {
             </a>
           </div>
           <nav className="header__nav">
-            <button className="header__btn-main-new _hover01" id="btnMainNew">
+            <button
+              className="header__btn-main-new _hover01"
+              id="btnMainNew"
+              onClick={addCard}
+            >
               <a href="#popNewCard">Создать новую задачу</a>
             </button>
 

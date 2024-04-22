@@ -30,11 +30,11 @@ function App() {
     <div className="wrapper">
       <ExitPopup />
 
-      <NewCardPopup addCard={addCard} />
+      <NewCardPopup  />
 
       <BrowsePopup />
 
-      <Header />
+      <Header addCard={addCard}/>
 
       {loading ? <p>loading</p> : <Main cards={cards} />}
     </div>
