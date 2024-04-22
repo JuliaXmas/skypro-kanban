@@ -1,6 +1,6 @@
 import "./App.css";
 import Header from "./components/Header";
-import Main from "./components/main";
+import Main from "./components/Main";
 import BrowsePopup from "./components/popups/Browse";
 import ExitPopup from "./components/popups/Exit";
 import NewCardPopup from "./components/popups/NewCard";
