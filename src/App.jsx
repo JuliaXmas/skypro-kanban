@@ -10,7 +10,8 @@ import { cardList, statusList } from "./data";
 function App() {
   const [loading, setLoading] = useState(true);
   const [cards, setCards] = useState(cardList);
-  const addCard = () => {
+  const addCard = (event) => {
+    event.preventDefault();
     console.log("Work");
     const newCard = {
       id: cards.length + 1,
@@ -30,11 +31,11 @@ function App() {
     <div className="wrapper">
       <ExitPopup />
 
-      <NewCardPopup  />
+      <NewCardPopup />
 
       <BrowsePopup />
 
-      <Header addCard={addCard}/>
+      <Header addCard={addCard} />
 
       {loading ? <p>loading</p> : <Main cards={cards} />}
     </div>
