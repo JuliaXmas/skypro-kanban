@@ -6,6 +6,7 @@ import ExitPopup from "./components/popups/Exit/Exit.jsx";
 import NewCardPopup from "./components/popups/NewCard/NewCard.jsx";
 import { useState, useEffect } from "react";
 import { cardList, statusList } from "./data";
+import { GlobalStyle } from "./global.styled.js";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -29,6 +30,7 @@ function App() {
 
   return (
     <div className="wrapper">
+      <GlobalStyle />
       <ExitPopup />
 
       <NewCardPopup />
