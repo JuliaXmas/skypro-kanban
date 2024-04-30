@@ -1,14 +1,17 @@
+import { CardBlock, CardsBlock } from "./Card.styled";
+
 // eslint-disable-next-line react/prop-types
 const Card = ({ topic, title, date }) => {
   const colors = {
     "Web Design": "_orange",
     Copywriting: "_purple",
     Research: "_green",
+    "Без статуса": "_gray",
   };
   return (
-    <div className="cards__item">
+    <CardsBlock>
       <div className="cards__card card">
-        <div className="card__group">
+        <CardBlock>
           <div className={`card__theme ${colors[topic]}`}>
             <p>{topic}</p>
           </div>
@@ -19,7 +22,7 @@ const Card = ({ topic, title, date }) => {
               <div></div>
             </div>
           </a>
-        </div>
+        </CardBlock>
         <div className="card__content">
           <a href="" target="_blank">
             <h3 className="card__title">{title}</h3>
@@ -57,7 +60,7 @@ const Card = ({ topic, title, date }) => {
           </div>
         </div>
       </div>
-    </div>
+    </CardsBlock>
   );
 };
 

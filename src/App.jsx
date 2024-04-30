@@ -15,7 +15,7 @@ function App() {
     console.log("Work");
     const newCard = {
       id: cards.length + 1,
-      topic: "Web Design",
+      topic: "Без статуса",
       title: "ToDo",
       date: new Date().toLocaleDateString(),
       status: statusList[0],

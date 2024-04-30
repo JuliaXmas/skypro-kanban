@@ -1,6 +1,8 @@
+import { CalendarBlock } from "./Calendar.styled";
+
 const Calendar = () => {
   return (
-    <div className="calendar__block">
+    <CalendarBlock>
       <div className="calendar__nav">
         <div className="calendar__month">Сентябрь 2023</div>
         <div className="nav__actions">
@@ -82,7 +84,7 @@ const Calendar = () => {
           <span className="date-control"></span>.
         </p>
       </div>
-    </div>
+    </CalendarBlock>
   );
 };
 

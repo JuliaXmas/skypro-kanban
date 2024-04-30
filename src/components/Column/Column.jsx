@@ -1,9 +1,10 @@
 import Card from "../Card/Card.jsx";
+import { ColumnBlock } from "./Column.styled.js";
 
 // eslint-disable-next-line react/prop-types
 const Column = ({ title, cardList }) => {
   return (
-    <div className="main__column">
+    <ColumnBlock>
       <div className="column__title">
         <p>{title}</p>
       </div>
@@ -17,7 +18,7 @@ const Column = ({ title, cardList }) => {
           />
         ))}
       </div>
-    </div>
+    </ColumnBlock>
   );
 };
 
