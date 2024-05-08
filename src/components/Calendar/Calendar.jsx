@@ -1,10 +1,10 @@
-import { CalendarBlock } from "./Calendar.styled";
+import * as S from "./Calendar.styled";
 
 const Calendar = () => {
   return (
-    <CalendarBlock>
-      <div className="calendar__nav">
-        <div className="calendar__month">Сентябрь 2023</div>
+    <S.CalendarBlock>
+      <S.CalendarNav>
+        <S.CalendarMonth>Сентябрь 2023</S.CalendarMonth>
         <div className="nav__actions">
           <div className="nav__action" data-action="prev">
             <svg
@@ -27,8 +27,8 @@ const Calendar = () => {
             </svg>
           </div>
         </div>
-      </div>
-      <div className="calendar__content">
+      </S.CalendarNav>
+      <S.CalendarContent>
         <div className="calendar__days-names">
           <div className="calendar__day-name">пн</div>
           <div className="calendar__day-name">вт</div>
@@ -38,7 +38,7 @@ const Calendar = () => {
           <div className="calendar__day-name -weekend-">сб</div>
           <div className="calendar__day-name -weekend-">вс</div>
         </div>
-        <div className="calendar__cells">
+        <S.CalendarCells>
           <div className="calendar__cell _other-month">28</div>
           <div className="calendar__cell _other-month">29</div>
           <div className="calendar__cell _other-month">30</div>
@@ -74,17 +74,17 @@ const Calendar = () => {
           <div className="calendar__cell _cell-day">29</div>
           <div className="calendar__cell _cell-day _weekend">30</div>
           <div className="calendar__cell _other-month _weekend">1</div>
-        </div>
-      </div>
+        </S.CalendarCells>
+      </S.CalendarContent>
 
       <input type="hidden" id="datepick_value" value="08.09.2023" />
-      <div className="calendar__period">
-        <p className="calendar__p date-end">
+      <S.CalendarPeriod>
+        <S.CalendarP>
           Выберите срок исполнения
           <span className="date-control"></span>.
-        </p>
-      </div>
-    </CalendarBlock>
+        </S.CalendarP>
+      </S.CalendarPeriod>
+    </S.CalendarBlock>
   );
 };
 

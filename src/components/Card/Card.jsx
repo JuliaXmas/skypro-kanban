@@ -1,4 +1,4 @@
-import { CardBlock, CardsBlock } from "./Card.styled";
+import * as S from "./Card.styled";
 
 // eslint-disable-next-line react/prop-types
 const Card = ({ topic, title, date }) => {
@@ -9,25 +9,25 @@ const Card = ({ topic, title, date }) => {
     "Без статуса": "_gray",
   };
   return (
-    <CardsBlock>
-      <div className="cards__card card">
-        <CardBlock>
+    <S.CardsBlock>
+      <S.Cards>
+        <S.CardBlock>
           <div className={`card__theme ${colors[topic]}`}>
             <p>{topic}</p>
           </div>
           <a href="#popBrowse" target="_self">
-            <div className="card__btn">
+            <S.CardButton>
               <div></div>
               <div></div>
               <div></div>
-            </div>
+            </S.CardButton>
           </a>
-        </CardBlock>
-        <div className="card__content">
+        </S.CardBlock>
+        <S.CardContent>
           <a href="" target="_blank">
             <h3 className="card__title">{title}</h3>
           </a>
-          <div className="card__date">
+          <S.CardDate>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="13"
@@ -57,10 +57,10 @@ const Card = ({ topic, title, date }) => {
               </defs>
             </svg>
             <p>{date}</p>
-          </div>
-        </div>
-      </div>
-    </CardsBlock>
+          </S.CardDate>
+        </S.CardContent>
+      </S.Cards>
+    </S.CardsBlock>
   );
 };
 
