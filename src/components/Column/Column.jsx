@@ -1,12 +1,12 @@
 import Card from "../Card/Card.jsx";
-import { ColumnBlock } from "./Column.styled.js";
+import * as S from "./Column.styled.js";
 
 // eslint-disable-next-line react/prop-types
 const Column = ({ title, cardList }) => {
   return (
-    <ColumnBlock>
+    <S.ColumnBlock>
       <div className="column__title">
-        <p>{title}</p>
+        <S.ColumnTitle>{title}</S.ColumnTitle>
       </div>
       <div className="cards">
         {cardList.map((card) => (
@@ -18,7 +18,7 @@ const Column = ({ title, cardList }) => {
           />
         ))}
       </div>
-    </ColumnBlock>
+    </S.ColumnBlock>
   );
 };
 

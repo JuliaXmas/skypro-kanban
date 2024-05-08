@@ -1,34 +1,31 @@
 import DropDownUserSet from "../DropDown/DropDown.jsx";
+import * as S from "./header.styled.js";
 
 const Header = ({ addCard }) => {
   return (
-    <header className="header">
+    <S.Header>
       <div className="container">
-        <div className="header__block">
-          <div className="header__logo _show _light">
+        <S.HedaerBlock>
+          <S.HeaderLogo>
             <a href="" target="_self">
               <img src="./images/logo.png" alt="logo" />
             </a>
-          </div>
+          </S.HeaderLogo>
           <div className="header__logo _dark">
             <a href="" target="_self">
               <img src="./images/logo_dark.png" alt="logo" />
             </a>
           </div>
-          <nav className="header__nav">
-            <button
-              className="header__btn-main-new _hover01"
-              id="btnMainNew"
-              onClick={addCard}
-            >
+          <S.HeaderNav>
+            <S.HeaderBtnMainNew onClick={addCard}>
               <a href="#popNewCard">Создать новую задачу</a>
-            </button>
+            </S.HeaderBtnMainNew>
 
             <DropDownUserSet />
-          </nav>
-        </div>
+          </S.HeaderNav>
+        </S.HedaerBlock>
       </div>
-    </header>
+    </S.Header>
   );
 };
 export default Header;
