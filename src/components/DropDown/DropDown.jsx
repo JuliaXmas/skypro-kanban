@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { HeaderNav } from "../Header/header.styled";
 
 const DropDownUserSet = () => {
   const [isOPen, setIsOpen] = useState(false);
@@ -6,7 +7,7 @@ const DropDownUserSet = () => {
     setIsOpen((prevState) => !prevState);
   };
   return (
-    <nav className="header__nav">
+    <HeaderNav>
       <a
         href="#user-set-target"
         className="header__user _hover02"
@@ -28,7 +29,7 @@ const DropDownUserSet = () => {
           </button>
         </div>
       )}
-    </nav>
+    </HeaderNav>
   );
 };
 

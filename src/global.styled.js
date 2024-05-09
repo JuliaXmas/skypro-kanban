@@ -36,14 +36,6 @@ body {
   color: #000000;
 }
 
-.wrapper {
-  max-width: 100%;
-  width: 100vw;
-  min-height: 100vh;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
-
 .container {
   max-width: 1260px;
   width: 100%;

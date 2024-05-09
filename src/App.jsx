@@ -7,6 +7,8 @@ import NewCardPopup from "./components/popups/NewCard/NewCard.jsx";
 import { useState, useEffect } from "react";
 import { cardList, statusList } from "./data";
 import { GlobalStyle } from "./global.styled.js";
+import { Wrapper } from "./App.styled.js";
+import * as S from "./preloader.styled.js";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -29,7 +31,7 @@ function App() {
   }, []);
 
   return (
-    <div className="wrapper">
+    <Wrapper>
       <GlobalStyle />
 
       <ExitPopup />
@@ -40,8 +42,16 @@ function App() {
 
       <Header addCard={addCard} />
 
-      {loading ? <p>loading</p> : <Main cards={cards} />}
-    </div>
+      {loading ? (
+        <S.Preloader>
+          <S.PreloaderLoader>
+            <S.Spinner></S.Spinner>
+          </S.PreloaderLoader>
+        </S.Preloader>
+      ) : (
+        <Main cards={cards} />
+      )}
+    </Wrapper>
   );
 }
 

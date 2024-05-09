@@ -8,13 +8,14 @@ const Card = ({ topic, title, date }) => {
     Research: "_green",
     "Без статуса": "_gray",
   };
+
   return (
     <S.CardsBlock>
       <S.Cards>
         <S.CardBlock>
-          <div className={`card__theme ${colors[topic]}`}>
-            <p>{topic}</p>
-          </div>
+          <S.CardTheme $color={colors[topic]}>
+            <S.CardTopic>{topic}</S.CardTopic>
+          </S.CardTheme>
           <a href="#popBrowse" target="_self">
             <S.CardButton>
               <div></div>
