@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { HeaderNav } from "../Header/header.styled";
+import * as S from "./DropDown.styled";
 
 const DropDownUserSet = () => {
   const [isOPen, setIsOpen] = useState(false);
@@ -8,13 +9,7 @@ const DropDownUserSet = () => {
   };
   return (
     <HeaderNav>
-      <a
-        href="#user-set-target"
-        className="header__user _hover02"
-        onClick={toggleDropDown}
-      >
-        Ivan Ivanov
-      </a>
+      <S.HeaderUser onClick={toggleDropDown}>Ivan Ivanov</S.HeaderUser>
       {isOPen && (
         <div className="header__pop-user-set pop-user-set" id="user-set-target">
           {/*  <!-- <a href="">x</a> --> */}
@@ -24,9 +19,9 @@ const DropDownUserSet = () => {
             <p>Темная тема</p>
             <input type="checkbox" className="checkbox" name="checkbox" />
           </div>
-          <button type="button" className="_hover03">
-            <a href="#popExit">Выйти</a>
-          </button>
+          <S.ExitButtonHeader>
+            <S.ExitButtonHeaderA>Выйти</S.ExitButtonHeaderA>
+          </S.ExitButtonHeader>
         </div>
       )}
     </HeaderNav>
