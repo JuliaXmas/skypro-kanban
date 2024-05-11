@@ -3,24 +3,31 @@ import { HeaderNav } from "../Header/header.styled";
 import * as S from "./DropDown.styled";
 
 const DropDownUserSet = () => {
-  const [isOPen, setIsOpen] = useState(false);
-  const toggleDropDown = () => {
-    setIsOpen((prevState) => !prevState);
-  };
+  const [isOpened, setIsOpened] = useState(false);
+  const [isOpenedPopUpExit, setIsOpenedPopUpExit] = useState(false);
+
+  function togglePopUpExit() {
+    setIsOpenedPopUpExit((isOpenedPopUpExit) => !isOpenedPopUpExit);
+  }
+
+  function togglePopUp() {
+    setIsOpened((isOpened) => !isOpened);
+  }
+
   return (
     <HeaderNav>
-      <S.HeaderUser onClick={toggleDropDown}>Ivan Ivanov</S.HeaderUser>
-      {isOPen && (
+      <S.HeaderUser onClick={togglePopUp}>Ivan Ivanov</S.HeaderUser>
+      {isOpenedPopUpExit && <S.PopExit />}
+      {isOpened && (
         <S.HeaderPopUserSet>
-          {/*  <!-- <a href="">x</a> --> */}
           <S.PopUserSetName>Ivan Ivanov</S.PopUserSetName>
           <S.PopUserSetMail>ivan.ivanov@gmail.com</S.PopUserSetMail>
           <S.PopUserSetTheme>
             <p>Темная тема</p>
-            <input type="checkbox" className="checkbox" name="checkbox" />
+            <S.PopUserSetThemeInput type="checkbox" name="checkbox" />
           </S.PopUserSetTheme>
-          <S.ExitButtonHeader>
-            <S.ExitButtonHeaderA>Выйти</S.ExitButtonHeaderA>
+          <S.ExitButtonHeader onClick={togglePopUpExit}>
+            Выйти
           </S.ExitButtonHeader>
         </S.HeaderPopUserSet>
       )}
