@@ -1,7 +1,8 @@
 import * as S from "./Card.styled";
+import { Link } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
-const Card = ({ topic, title, date }) => {
+const Card = ({ topic, title, date, id }) => {
   const colors = {
     "Web Design": "_orange",
     Copywriting: "_purple",
@@ -16,18 +17,18 @@ const Card = ({ topic, title, date }) => {
           <S.CardTheme $color={colors[topic]}>
             <S.CardTopic>{topic}</S.CardTopic>
           </S.CardTheme>
-          <a href="#popBrowse" target="_self">
-            <S.CardButton>
+          <Link to={`/card/${id}`}>
+            <div className="card__btn">
               <div></div>
               <div></div>
               <div></div>
-            </S.CardButton>
-          </a>
+            </div>
+          </Link>
         </S.CardBlock>
         <S.CardContent>
-          <a href="" target="_blank">
+          <Link to={`/card/${id}`}>
             <h3 className="card__title">{title}</h3>
-          </a>
+          </Link>
           <S.CardDate>
             <svg
               xmlns="http://www.w3.org/2000/svg"
