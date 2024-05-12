@@ -5,10 +5,10 @@ import * as S from "./Column.styled.js";
 const Column = ({ title, cardList }) => {
   return (
     <S.ColumnBlock>
-      <div classNamenameName="column__title">
+      <div className="column__title">
         <S.ColumnTitle>{title}</S.ColumnTitle>
       </div>
-      <div classNamenameName="cards">
+      <div className="cards">
         {cardList.map((card) => (
           <Card
             key={card.id}

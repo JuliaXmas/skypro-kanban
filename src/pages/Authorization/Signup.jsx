@@ -23,7 +23,7 @@ const UserSignup = () => {
                 id="first-name"
                 placeholder="Имя"
               />
-              <S.SignupInput
+              <S.SignInput
                 className="modal__input login"
                 type="text"
                 name="login"

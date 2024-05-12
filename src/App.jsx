@@ -43,6 +43,26 @@ function App() {
 
   return (
     <Wrapper>
+      <GlobalStyle />
+
+      <ExitPopup />
+
+      <NewCardPopup />
+
+      <BrowsePopup />
+
+      <Header addCard={addCard} />
+
+      {loading ? (
+        <S.Preloader>
+          <S.PreloaderLoader>
+            <S.Spinner></S.Spinner>
+          </S.PreloaderLoader>
+        </S.Preloader>
+      ) : (
+        <Main cards={cards} />
+      )}
+
       <Routes>
         <Route element={<PrivateRoute isAuth={isAuth} />}>
           <Route
@@ -63,25 +83,6 @@ function App() {
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-      <GlobalStyle />
-
-      <ExitPopup />
-
-      <NewCardPopup />
-
-      <BrowsePopup />
-
-      <Header addCard={addCard} />
-
-      {loading ? (
-        <S.Preloader>
-          <S.PreloaderLoader>
-            <S.Spinner></S.Spinner>
-          </S.PreloaderLoader>
-        </S.Preloader>
-      ) : (
-        <Main cards={cards} />
-      )}
     </Wrapper>
   );
 }

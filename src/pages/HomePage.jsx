@@ -1,8 +1,8 @@
-import Header from "../../components/Header/Header.jsx";
-import Main from "../../components/Main/Main.jsx";
 import { useEffect, useState } from "react";
-import { Loader } from "../../lib/Loader.styled.js";
 import { Outlet } from "react-router-dom";
+import Main from "../components/Main/Main.jsx";
+import Header from "../components/Header/Header.jsx";
+import * as S from "../preloader.styled.js";
 
 function HomePage({ cards, setCards }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -13,12 +13,14 @@ function HomePage({ cards, setCards }) {
 
   return (
     <div className="wrapper">
-      {/* Компонент Header */}
       <Header />
 
-      {/* Компонент Main с прелоадером */}
       {isLoading ? (
-        <Loader>Загружаю задачи ...</Loader>
+        <S.Preloader>
+          <S.PreloaderLoader>
+            <S.Spinner></S.Spinner>
+          </S.PreloaderLoader>
+        </S.Preloader>
       ) : (
         <Main cards={cards} />
       )}

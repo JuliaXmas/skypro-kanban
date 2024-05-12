@@ -1,24 +1,27 @@
-const ExitPopup = () => {
+import { Link, useNavigate } from "react-router-dom";
+
+const PopExit = ({ logOut }) => {
+  let navigate = useNavigate();
+
+  function handleSubmit() {
+    logOut();
+    navigate("/login");
+  }
+
   return (
-    <div classNamenameName="pop-exit" id="popExit">
-      <div classNamenameName="pop-exit__container">
-        <div classNamenameName="pop-exit__block">
-          <div classNamenameName="pop-exit__ttl">
+    <div className="pop-exit" id="popExit">
+      <div className="pop-exit__container">
+        <div className="pop-exit__block">
+          <div className="pop-exit__ttl">
             <h2>Выйти из аккаунта?</h2>
           </div>
-          <form classNamenameName="pop-exit__form" id="formExit" action="#">
-            <div classNamenameName="pop-exit__form-group">
-              <button
-                classNamenameName="pop-exit__exit-yes _hover01"
-                id="exitYes"
-              >
-                <a href="modal/signin.html">Да, выйти</a>
+          <form className="pop-exit__form" id="formExit" action="#">
+            <div className="pop-exit__form-group">
+              <button className="pop-exit__exit-yes _hover01" id="exitYes">
+                <a onClick={handleSubmit}>Да, выйти</a>
               </button>
-              <button
-                classNamenameName="pop-exit__exit-no _hover03"
-                id="exitNo"
-              >
-                <a href="main.html">Нет, остаться</a>
+              <button className="pop-exit__exit-no _hover03" id="exitNo">
+                <Link to={"/"}>Нет, остаться</Link>
               </button>
             </div>
           </form>
@@ -27,4 +30,5 @@ const ExitPopup = () => {
     </div>
   );
 };
-export default ExitPopup;
+
+export default PopExit;

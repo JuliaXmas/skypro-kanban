@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SignupWrapper = styled.div`
+export const SignWrapper = styled.div`
   width: 100%;
   height: 100%;
   overflow-x: hidden;
@@ -8,7 +8,7 @@ export const SignupWrapper = styled.div`
   background-color: #eaeef6;
 `;
 
-export const SignupContainer = styled.div`
+export const SignContainer = styled.div`
   display: block;
   width: 100vw;
   min-height: 100vh;
@@ -108,7 +108,7 @@ export const SignBtnEnt = styled.button`
   }
 `;
 
-export const SignupFromGroup = styled.div`
+export const SignFromGroup = styled.div`
   text-align: center;
 
   & p,

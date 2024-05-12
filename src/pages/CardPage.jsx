@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
-import PopBrowse from "../../components/PopUps/PopBrowse/PopBrowse";
+import BrowsePopup from "../components/popups/Browse/Browse";
 
 function CurrentCard() {
   let { id } = useParams();
 
-  return <PopBrowse id={id} />;
+  return <BrowsePopup id={id} />;
 }
 
 export default CurrentCard;

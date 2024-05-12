@@ -1,11 +1,11 @@
-import PopExit from "../../components/PopUps/PopExit/PopExit";
+import ExitPopup from "../components/popups/Exit/Exit";
 
 function ExitPage({ setLogin }) {
   function logOut() {
     setLogin(false);
   }
 
-  return <PopExit logOut={logOut} />;
+  return <ExitPopup logOut={logOut} />;
 }
 
 export default ExitPage;

@@ -32,15 +32,13 @@ const UserLogin = ({ login }) => {
               action="#"
               onKeyDown={handleKeyPress}
             >
-              <S.SignupInput
-                className="modal__input"
+              <S.SignInput
                 type="text"
                 name="login"
                 id="formlogin"
                 placeholder="Эл. почта"
               />
               <S.SignInput
-                className="modal__input"
                 type="password"
                 name="password"
                 id="formpassword"
