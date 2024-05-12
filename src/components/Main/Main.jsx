@@ -5,7 +5,7 @@ import * as S from "./main.styled.js";
 const Main = ({ cards }) => {
   return (
     <S.Main>
-      <div className="container">
+      <div classNamenameName="container">
         <S.MainBlock>
           <S.MainContent>
             {statusList.map((status) => (

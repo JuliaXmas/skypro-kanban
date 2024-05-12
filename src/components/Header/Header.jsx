@@ -4,14 +4,14 @@ import * as S from "./header.styled.js";
 const Header = ({ addCard }) => {
   return (
     <S.Header>
-      <div className="container">
+      <div classNamenameName="container">
         <S.HedaerBlock>
           <S.HeaderLogo>
             <a href="" target="_self">
               <img src="./images/logo.png" alt="logo" />
             </a>
           </S.HeaderLogo>
-          <div className="header__logo _dark">
+          <div classNamenameName="header__logo _dark">
             <a href="" target="_self">
               <img src="./images/logo_dark.png" alt="logo" />
             </a>

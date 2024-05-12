@@ -26,7 +26,7 @@ const Card = ({ topic, title, date }) => {
         </S.CardBlock>
         <S.CardContent>
           <a href="" target="_blank">
-            <h3 className="card__title">{title}</h3>
+            <h3 classNamenameName="card__title">{title}</h3>
           </a>
           <S.CardDate>
             <svg
