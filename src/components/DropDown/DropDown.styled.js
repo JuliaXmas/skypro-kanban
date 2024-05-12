@@ -110,6 +110,13 @@ export const PopUserSetThemeInput = styled.input`
 `;
 
 export const ExitButtonHeader = styled.button`
+  width: 72px;
+  height: 30px;
+  background: transparent;
+  color: #565eef;
+  border-radius: 4px;
+  border: 1px solid #565eef;
+
   &:hover {
     background-color: #33399b;
     color: #ffffff;

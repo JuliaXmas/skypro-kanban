@@ -9,6 +9,7 @@ import { cardList, statusList } from "./data";
 import { GlobalStyle } from "./global.styled.js";
 import { Wrapper } from "./App.styled.js";
 import * as S from "./preloader.styled.js";
+// import { Routes, Route } from 'react-router-dom';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -32,6 +33,13 @@ function App() {
 
   return (
     <Wrapper>
+
+      {/* <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="*" element={<NotFoundPage />} />
+    </Routes>
+     */}
       <GlobalStyle />
 
       <ExitPopup />
