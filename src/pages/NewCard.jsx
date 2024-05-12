@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import NewCardPopup from "../components/popups/NewCard/NewCard";
 import { statusList } from "../data";
 
+
 function NewCard({ cards, setCards }) {
   let navigate = useNavigate();
 

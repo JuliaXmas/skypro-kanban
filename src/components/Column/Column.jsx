@@ -15,7 +15,7 @@ const Column = ({ title, cardList }) => {
             id={card.id}
             topic={card.topic}
             title={card.title}
-            date={card.date}
+            date={new Date().toLocaleDateString()}
           />
         ))}
       </div>
