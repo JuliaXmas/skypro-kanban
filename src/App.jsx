@@ -8,13 +8,13 @@ import UserSignup from "./pages/Authorization/Signup.jsx";
 import PrivateRoute from "./pages/PrivateRoute.jsx";
 import CurrentCard from "./pages/CardPage.jsx";
 import ExitPage from "./pages/ExitPage.jsx";
-import NewCard from "./pages/NewCard.jsx";
 // import NotFoundPage from "./pages/NotFoundPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import { cardList } from "./data.js";
+import NewCard from "./pages/NewCardPage.jsx";
 
 function App() {
-  const [isAuth, setIsAuth] = useState(false);
+  const [isAuth, setIsAuth] = useState(true);
   const [cards, setCards] = useState(cardList);
 
   return (
