@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import { statusList } from "../../data";
 import NewCardPopup from "../components/popups/NewCard/NewCard";
-import { statusList } from "../data";
-
 
 function NewCard({ cards, setCards }) {
   let navigate = useNavigate();
