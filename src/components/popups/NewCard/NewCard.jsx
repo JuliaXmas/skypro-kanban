@@ -1,6 +1,6 @@
 import Calendar from "../../Calendar/Calendar";
 import { useNavigate } from "react-router-dom";
-import { PopNewCardClose } from "./NewCard.styled";
+import { PopNewCardClose, PopupNewCard } from "./NewCard.styled";
 
 const NewCardPopup = ({ addCard, cards, setCards }) => {
   let navigate = useNavigate();
@@ -9,7 +9,7 @@ const NewCardPopup = ({ addCard, cards, setCards }) => {
     navigate("/");
   }
   return (
-    <div className="pop-new-card" id="popNewCard">
+    <PopupNewCard>
       <div className="pop-new-card__container">
         <div className="pop-new-card__block">
           <div className="pop-new-card__content">
@@ -75,7 +75,7 @@ const NewCardPopup = ({ addCard, cards, setCards }) => {
           </div>
         </div>
       </div>
-    </div>
+    </PopupNewCard>
   );
 };
 
