@@ -1,23 +1,25 @@
 import Card from "../Card/Card.jsx";
+import * as S from "./Column.styled.js";
 
 // eslint-disable-next-line react/prop-types
 const Column = ({ title, cardList }) => {
   return (
-    <div className="main__column">
+    <S.ColumnBlock>
       <div className="column__title">
-        <p>{title}</p>
+        <S.ColumnTitle>{title}</S.ColumnTitle>
       </div>
       <div className="cards">
         {cardList.map((card) => (
           <Card
             key={card.id}
+            id={card.id}
             topic={card.topic}
             title={card.title}
-            date={card.date}
+            date={new Date().toLocaleDateString()}
           />
         ))}
       </div>
-    </div>
+    </S.ColumnBlock>
   );
 };
 

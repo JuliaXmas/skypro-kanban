@@ -17,21 +17,24 @@
     <title>Skypro</title>
   </head>
   <body>
-    <div class="wrapper">
+    <div classNamename="wrapper">
       <!-- pop-up start-->
 
-      <div class="pop-exit" id="popExit">
-        <div class="pop-exit__container">
-          <div class="pop-exit__block">
-            <div class="pop-exit__ttl">
+      <div classNamename="pop-exit" id="popExit">
+        <div classNamename="pop-exit__container">
+          <div classNamename="pop-exit__block">
+            <div classNamename="pop-exit__ttl">
               <h2>Выйти из аккаунта?</h2>
             </div>
-            <form class="pop-exit__form" id="formExit" action="#">
-              <div class="pop-exit__form-group">
-                <button class="pop-exit__exit-yes _hover01" id="exitYes">
+            <form classNamename="pop-exit__form" id="formExit" action="#">
+              <div classNamename="pop-exit__form-group">
+                <button
+                  classNamename="pop-exit__exit-yes _hover01"
+                  id="exitYes"
+                >
                   <a href="modal/signin.html">Да, выйти</a>
                 </button>
-                <button class="pop-exit__exit-no _hover03" id="exitNo">
+                <button classNamename="pop-exit__exit-no _hover03" id="exitNo">
                   <a href="main.html">Нет, остаться</a>
                 </button>
               </div>
@@ -40,24 +43,24 @@
         </div>
       </div>
 
-      <div class="pop-new-card" id="popNewCard">
-        <div class="pop-new-card__container">
-          <div class="pop-new-card__block">
-            <div class="pop-new-card__content">
-              <h3 class="pop-new-card__ttl">Создание задачи</h3>
-              <a href="#" class="pop-new-card__close">&#10006;</a>
-              <div class="pop-new-card__wrap">
+      <div classNamename="pop-new-card" id="popNewCard">
+        <div classNamename="pop-new-card__container">
+          <div classNamename="pop-new-card__block">
+            <div classNamename="pop-new-card__content">
+              <h3 classNamename="pop-new-card__ttl">Создание задачи</h3>
+              <a href="#" classNamename="pop-new-card__close">&#10006;</a>
+              <div classNamename="pop-new-card__wrap">
                 <form
-                  class="pop-new-card__form form-new"
+                  classNamename="pop-new-card__form form-new"
                   id="formNewCard"
                   action="#"
                 >
-                  <div class="form-new__block">
-                    <label for="formTitle" class="subttl"
+                  <div classNamename="form-new__block">
+                    <label for="formTitle" classNamename="subttl"
                       >Название задачи</label
                     >
                     <input
-                      class="form-new__input"
+                      classNamename="form-new__input"
                       type="text"
                       name="name"
                       id="formTitle"
@@ -65,23 +68,25 @@
                       autofocus
                     />
                   </div>
-                  <div class="form-new__block">
-                    <label for="textArea" class="subttl">Описание задачи</label>
+                  <div classNamename="form-new__block">
+                    <label for="textArea" classNamename="subttl"
+                      >Описание задачи</label
+                    >
                     <textarea
-                      class="form-new__area"
+                      classNamename="form-new__area"
                       name="text"
                       id="textArea"
                       placeholder="Введите описание задачи..."
                     ></textarea>
                   </div>
                 </form>
-                <div class="pop-new-card__calendar calendar">
-                  <p class="calendar__ttl subttl">Даты</p>
-                  <div class="calendar__block">
-                    <div class="calendar__nav">
-                      <div class="calendar__month">Сентябрь 2023</div>
-                      <div class="nav__actions">
-                        <div class="nav__action" data-action="prev">
+                <div classNamename="pop-new-card__calendar calendar">
+                  <p classNamename="calendar__ttl subttl">Даты</p>
+                  <div classNamename="calendar__block">
+                    <div classNamename="calendar__nav">
+                      <div classNamename="calendar__month">Сентябрь 2023</div>
+                      <div classNamename="nav__actions">
+                        <div classNamename="nav__action" data-action="prev">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="6"
@@ -93,7 +98,7 @@
                             />
                           </svg>
                         </div>
-                        <div class="nav__action" data-action="next">
+                        <div classNamename="nav__action" data-action="next">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="6"
@@ -107,52 +112,84 @@
                         </div>
                       </div>
                     </div>
-                    <div class="calendar__content">
-                      <div class="calendar__days-names">
-                        <div class="calendar__day-name">пн</div>
-                        <div class="calendar__day-name">вт</div>
-                        <div class="calendar__day-name">ср</div>
-                        <div class="calendar__day-name">чт</div>
-                        <div class="calendar__day-name">пт</div>
-                        <div class="calendar__day-name -weekend-">сб</div>
-                        <div class="calendar__day-name -weekend-">вс</div>
+                    <div classNamename="calendar__content">
+                      <div classNamename="calendar__days-names">
+                        <div classNamename="calendar__day-name">пн</div>
+                        <div classNamename="calendar__day-name">вт</div>
+                        <div classNamename="calendar__day-name">ср</div>
+                        <div classNamename="calendar__day-name">чт</div>
+                        <div classNamename="calendar__day-name">пт</div>
+                        <div classNamename="calendar__day-name -weekend-">
+                          сб
+                        </div>
+                        <div classNamename="calendar__day-name -weekend-">
+                          вс
+                        </div>
                       </div>
-                      <div class="calendar__cells">
-                        <div class="calendar__cell _other-month">28</div>
-                        <div class="calendar__cell _other-month">29</div>
-                        <div class="calendar__cell _other-month">30</div>
-                        <div class="calendar__cell _cell-day">31</div>
-                        <div class="calendar__cell _cell-day">1</div>
-                        <div class="calendar__cell _cell-day _weekend">2</div>
-                        <div class="calendar__cell _cell-day _weekend">3</div>
-                        <div class="calendar__cell _cell-day">4</div>
-                        <div class="calendar__cell _cell-day">5</div>
-                        <div class="calendar__cell _cell-day">6</div>
-                        <div class="calendar__cell _cell-day">7</div>
-                        <div class="calendar__cell _cell-day _current">8</div>
-                        <div class="calendar__cell _cell-day _weekend">9</div>
-                        <div class="calendar__cell _cell-day _weekend">10</div>
-                        <div class="calendar__cell _cell-day">11</div>
-                        <div class="calendar__cell _cell-day">12</div>
-                        <div class="calendar__cell _cell-day">13</div>
-                        <div class="calendar__cell _cell-day">14</div>
-                        <div class="calendar__cell _cell-day">15</div>
-                        <div class="calendar__cell _cell-day _weekend">16</div>
-                        <div class="calendar__cell _cell-day _weekend">17</div>
-                        <div class="calendar__cell _cell-day">18</div>
-                        <div class="calendar__cell _cell-day">19</div>
-                        <div class="calendar__cell _cell-day">20</div>
-                        <div class="calendar__cell _cell-day">21</div>
-                        <div class="calendar__cell _cell-day">22</div>
-                        <div class="calendar__cell _cell-day _weekend">23</div>
-                        <div class="calendar__cell _cell-day _weekend">24</div>
-                        <div class="calendar__cell _cell-day">25</div>
-                        <div class="calendar__cell _cell-day">26</div>
-                        <div class="calendar__cell _cell-day">27</div>
-                        <div class="calendar__cell _cell-day">28</div>
-                        <div class="calendar__cell _cell-day">29</div>
-                        <div class="calendar__cell _cell-day _weekend">30</div>
-                        <div class="calendar__cell _other-month _weekend">
+                      <div classNamename="calendar__cells">
+                        <div classNamename="calendar__cell _other-month">
+                          28
+                        </div>
+                        <div classNamename="calendar__cell _other-month">
+                          29
+                        </div>
+                        <div classNamename="calendar__cell _other-month">
+                          30
+                        </div>
+                        <div classNamename="calendar__cell _cell-day">31</div>
+                        <div classNamename="calendar__cell _cell-day">1</div>
+                        <div classNamename="calendar__cell _cell-day _weekend">
+                          2
+                        </div>
+                        <div classNamename="calendar__cell _cell-day _weekend">
+                          3
+                        </div>
+                        <div classNamename="calendar__cell _cell-day">4</div>
+                        <div classNamename="calendar__cell _cell-day">5</div>
+                        <div classNamename="calendar__cell _cell-day">6</div>
+                        <div classNamename="calendar__cell _cell-day">7</div>
+                        <div classNamename="calendar__cell _cell-day _current">
+                          8
+                        </div>
+                        <div classNamename="calendar__cell _cell-day _weekend">
+                          9
+                        </div>
+                        <div classNamename="calendar__cell _cell-day _weekend">
+                          10
+                        </div>
+                        <div classNamename="calendar__cell _cell-day">11</div>
+                        <div classNamename="calendar__cell _cell-day">12</div>
+                        <div classNamename="calendar__cell _cell-day">13</div>
+                        <div classNamename="calendar__cell _cell-day">14</div>
+                        <div classNamename="calendar__cell _cell-day">15</div>
+                        <div classNamename="calendar__cell _cell-day _weekend">
+                          16
+                        </div>
+                        <div classNamename="calendar__cell _cell-day _weekend">
+                          17
+                        </div>
+                        <div classNamename="calendar__cell _cell-day">18</div>
+                        <div classNamename="calendar__cell _cell-day">19</div>
+                        <div classNamename="calendar__cell _cell-day">20</div>
+                        <div classNamename="calendar__cell _cell-day">21</div>
+                        <div classNamename="calendar__cell _cell-day">22</div>
+                        <div classNamename="calendar__cell _cell-day _weekend">
+                          23
+                        </div>
+                        <div classNamename="calendar__cell _cell-day _weekend">
+                          24
+                        </div>
+                        <div classNamename="calendar__cell _cell-day">25</div>
+                        <div classNamename="calendar__cell _cell-day">26</div>
+                        <div classNamename="calendar__cell _cell-day">27</div>
+                        <div classNamename="calendar__cell _cell-day">28</div>
+                        <div classNamename="calendar__cell _cell-day">29</div>
+                        <div classNamename="calendar__cell _cell-day _weekend">
+                          30
+                        </div>
+                        <div
+                          classNamename="calendar__cell _other-month _weekend"
+                        >
                           1
                         </div>
                       </div>
@@ -163,30 +200,32 @@
                       id="datepick_value"
                       value="08.09.2023"
                     />
-                    <div class="calendar__period">
-                      <p class="calendar__p date-end">
+                    <div classNamename="calendar__period">
+                      <p classNamename="calendar__p date-end">
                         Выберите срок исполнения
-                        <span class="date-control"></span>.
+                        <span classNamename="date-control"></span>.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="pop-new-card__categories categories">
-                <p class="categories__p subttl">Категория</p>
-                <div class="categories__themes">
-                  <div class="categories__theme _orange _active-category">
-                    <p class="_orange">Web Design</p>
+              <div classNamename="pop-new-card__categories categories">
+                <p classNamename="categories__p subttl">Категория</p>
+                <div classNamename="categories__themes">
+                  <div
+                    classNamename="categories__theme _orange _active-category"
+                  >
+                    <p classNamename="_orange">Web Design</p>
                   </div>
-                  <div class="categories__theme _green">
-                    <p class="_green">Research</p>
+                  <div classNamename="categories__theme _green">
+                    <p classNamename="_green">Research</p>
                   </div>
-                  <div class="categories__theme _purple">
-                    <p class="_purple">Copywriting</p>
+                  <div classNamename="categories__theme _purple">
+                    <p classNamename="_purple">Copywriting</p>
                   </div>
                 </div>
               </div>
-              <button class="form-new__create _hover01" id="btnCreate">
+              <button classNamename="form-new__create _hover01" id="btnCreate">
                 Создать задачу
               </button>
             </div>
@@ -194,50 +233,50 @@
         </div>
       </div>
 
-      <div class="pop-browse" id="popBrowse">
-        <div class="pop-browse__container">
-          <div class="pop-browse__block">
-            <div class="pop-browse__content">
-              <div class="pop-browse__top-block">
-                <h3 class="pop-browse__ttl">Название задачи</h3>
+      <div classNamename="pop-browse" id="popBrowse">
+        <div classNamename="pop-browse__container">
+          <div classNamename="pop-browse__block">
+            <div classNamename="pop-browse__content">
+              <div classNamename="pop-browse__top-block">
+                <h3 classNamename="pop-browse__ttl">Название задачи</h3>
                 <div
-                  class="categories__theme theme-top _orange _active-category"
+                  classNamename="categories__theme theme-top _orange _active-category"
                 >
-                  <p class="_orange">Web Design</p>
+                  <p classNamename="_orange">Web Design</p>
                 </div>
               </div>
-              <div class="pop-browse__status status">
-                <p class="status__p subttl">Статус</p>
-                <div class="status__themes">
-                  <div class="status__theme _hide">
+              <div classNamename="pop-browse__status status">
+                <p classNamename="status__p subttl">Статус</p>
+                <div classNamename="status__themes">
+                  <div classNamename="status__theme _hide">
                     <p>Без статуса</p>
                   </div>
-                  <div class="status__theme _gray">
-                    <p class="_gray">Нужно сделать</p>
+                  <div classNamename="status__theme _gray">
+                    <p classNamename="_gray">Нужно сделать</p>
                   </div>
-                  <div class="status__theme _hide">
+                  <div classNamename="status__theme _hide">
                     <p>В работе</p>
                   </div>
-                  <div class="status__theme _hide">
+                  <div classNamename="status__theme _hide">
                     <p>Тестирование</p>
                   </div>
-                  <div class="status__theme _hide">
+                  <div classNamename="status__theme _hide">
                     <p>Готово</p>
                   </div>
                 </div>
               </div>
-              <div class="pop-browse__wrap">
+              <div classNamename="pop-browse__wrap">
                 <form
-                  class="pop-browse__form form-browse"
+                  classNamename="pop-browse__form form-browse"
                   id="formBrowseCard"
                   action="#"
                 >
-                  <div class="form-browse__block">
-                    <label for="textArea01" class="subttl"
+                  <div classNamename="form-browse__block">
+                    <label for="textArea01" classNamename="subttl"
                       >Описание задачи</label
                     >
                     <textarea
-                      class="form-browse__area"
+                      classNamename="form-browse__area"
                       name="text"
                       id="textArea01"
                       readonly
@@ -245,13 +284,13 @@
                     ></textarea>
                   </div>
                 </form>
-                <div class="pop-new-card__calendar calendar">
-                  <p class="calendar__ttl subttl">Даты</p>
-                  <div class="calendar__block">
-                    <div class="calendar__nav">
-                      <div class="calendar__month">Сентябрь 2023</div>
-                      <div class="nav__actions">
-                        <div class="nav__action" data-action="prev">
+                <div classNamename="pop-new-card__calendar calendar">
+                  <p classNamename="calendar__ttl subttl">Даты</p>
+                  <div classNamename="calendar__block">
+                    <div classNamename="calendar__nav">
+                      <div classNamename="calendar__month">Сентябрь 2023</div>
+                      <div classNamename="nav__actions">
+                        <div classNamename="nav__action" data-action="prev">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="6"
@@ -263,7 +302,7 @@
                             />
                           </svg>
                         </div>
-                        <div class="nav__action" data-action="next">
+                        <div classNamename="nav__action" data-action="next">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="6"
@@ -277,56 +316,86 @@
                         </div>
                       </div>
                     </div>
-                    <div class="calendar__content">
-                      <div class="calendar__days-names">
-                        <div class="calendar__day-name">пн</div>
-                        <div class="calendar__day-name">вт</div>
-                        <div class="calendar__day-name">ср</div>
-                        <div class="calendar__day-name">чт</div>
-                        <div class="calendar__day-name">пт</div>
-                        <div class="calendar__day-name -weekend-">сб</div>
-                        <div class="calendar__day-name -weekend-">вс</div>
+                    <div classNamename="calendar__content">
+                      <div classNamename="calendar__days-names">
+                        <div classNamename="calendar__day-name">пн</div>
+                        <div classNamename="calendar__day-name">вт</div>
+                        <div classNamename="calendar__day-name">ср</div>
+                        <div classNamename="calendar__day-name">чт</div>
+                        <div classNamename="calendar__day-name">пт</div>
+                        <div classNamename="calendar__day-name -weekend-">
+                          сб
+                        </div>
+                        <div classNamename="calendar__day-name -weekend-">
+                          вс
+                        </div>
                       </div>
-                      <div class="calendar__cells">
-                        <div class="calendar__cell _other-month">28</div>
-                        <div class="calendar__cell _other-month">29</div>
-                        <div class="calendar__cell _other-month">30</div>
-                        <div class="calendar__cell _cell-day">31</div>
-                        <div class="calendar__cell _cell-day">1</div>
-                        <div class="calendar__cell _cell-day _weekend">2</div>
-                        <div class="calendar__cell _cell-day _weekend">3</div>
-                        <div class="calendar__cell _cell-day">4</div>
-                        <div class="calendar__cell _cell-day">5</div>
-                        <div class="calendar__cell _cell-day">6</div>
-                        <div class="calendar__cell _cell-day">7</div>
-                        <div class="calendar__cell _cell-day _current">8</div>
+                      <div classNamename="calendar__cells">
+                        <div classNamename="calendar__cell _other-month">
+                          28
+                        </div>
+                        <div classNamename="calendar__cell _other-month">
+                          29
+                        </div>
+                        <div classNamename="calendar__cell _other-month">
+                          30
+                        </div>
+                        <div classNamename="calendar__cell _cell-day">31</div>
+                        <div classNamename="calendar__cell _cell-day">1</div>
+                        <div classNamename="calendar__cell _cell-day _weekend">
+                          2
+                        </div>
+                        <div classNamename="calendar__cell _cell-day _weekend">
+                          3
+                        </div>
+                        <div classNamename="calendar__cell _cell-day">4</div>
+                        <div classNamename="calendar__cell _cell-day">5</div>
+                        <div classNamename="calendar__cell _cell-day">6</div>
+                        <div classNamename="calendar__cell _cell-day">7</div>
+                        <div classNamename="calendar__cell _cell-day _current">
+                          8
+                        </div>
                         <div
-                          class="calendar__cell _cell-day _weekend _active-day"
+                          classNamename="calendar__cell _cell-day _weekend _active-day"
                         >
                           9
                         </div>
-                        <div class="calendar__cell _cell-day _weekend">10</div>
-                        <div class="calendar__cell _cell-day">11</div>
-                        <div class="calendar__cell _cell-day">12</div>
-                        <div class="calendar__cell _cell-day">13</div>
-                        <div class="calendar__cell _cell-day">14</div>
-                        <div class="calendar__cell _cell-day">15</div>
-                        <div class="calendar__cell _cell-day _weekend">16</div>
-                        <div class="calendar__cell _cell-day _weekend">17</div>
-                        <div class="calendar__cell _cell-day">18</div>
-                        <div class="calendar__cell _cell-day">19</div>
-                        <div class="calendar__cell _cell-day">20</div>
-                        <div class="calendar__cell _cell-day">21</div>
-                        <div class="calendar__cell _cell-day">22</div>
-                        <div class="calendar__cell _cell-day _weekend">23</div>
-                        <div class="calendar__cell _cell-day _weekend">24</div>
-                        <div class="calendar__cell _cell-day">25</div>
-                        <div class="calendar__cell _cell-day">26</div>
-                        <div class="calendar__cell _cell-day">27</div>
-                        <div class="calendar__cell _cell-day">28</div>
-                        <div class="calendar__cell _cell-day">29</div>
-                        <div class="calendar__cell _cell-day _weekend">30</div>
-                        <div class="calendar__cell _other-month _weekend">
+                        <div classNamename="calendar__cell _cell-day _weekend">
+                          10
+                        </div>
+                        <div classNamename="calendar__cell _cell-day">11</div>
+                        <div classNamename="calendar__cell _cell-day">12</div>
+                        <div classNamename="calendar__cell _cell-day">13</div>
+                        <div classNamename="calendar__cell _cell-day">14</div>
+                        <div classNamename="calendar__cell _cell-day">15</div>
+                        <div classNamename="calendar__cell _cell-day _weekend">
+                          16
+                        </div>
+                        <div classNamename="calendar__cell _cell-day _weekend">
+                          17
+                        </div>
+                        <div classNamename="calendar__cell _cell-day">18</div>
+                        <div classNamename="calendar__cell _cell-day">19</div>
+                        <div classNamename="calendar__cell _cell-day">20</div>
+                        <div classNamename="calendar__cell _cell-day">21</div>
+                        <div classNamename="calendar__cell _cell-day">22</div>
+                        <div classNamename="calendar__cell _cell-day _weekend">
+                          23
+                        </div>
+                        <div classNamename="calendar__cell _cell-day _weekend">
+                          24
+                        </div>
+                        <div classNamename="calendar__cell _cell-day">25</div>
+                        <div classNamename="calendar__cell _cell-day">26</div>
+                        <div classNamename="calendar__cell _cell-day">27</div>
+                        <div classNamename="calendar__cell _cell-day">28</div>
+                        <div classNamename="calendar__cell _cell-day">29</div>
+                        <div classNamename="calendar__cell _cell-day _weekend">
+                          30
+                        </div>
+                        <div
+                          classNamename="calendar__cell _other-month _weekend"
+                        >
                           1
                         </div>
                       </div>
@@ -337,50 +406,50 @@
                       id="datepick_value"
                       value="08.09.2023"
                     />
-                    <div class="calendar__period">
-                      <p class="calendar__p date-end">
+                    <div classNamename="calendar__period">
+                      <p classNamename="calendar__p date-end">
                         Срок исполнения:
-                        <span class="date-control">09.09.23</span>
+                        <span classNamename="date-control">09.09.23</span>
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="theme-down__categories theme-down">
-                <p class="categories__p subttl">Категория</p>
-                <div class="categories__theme _orange _active-category">
-                  <p class="_orange">Web Design</p>
+              <div classNamename="theme-down__categories theme-down">
+                <p classNamename="categories__p subttl">Категория</p>
+                <div classNamename="categories__theme _orange _active-category">
+                  <p classNamename="_orange">Web Design</p>
                 </div>
               </div>
-              <div class="pop-browse__btn-browse">
-                <div class="btn-group">
-                  <button class="btn-browse__edit _btn-bor _hover03">
+              <div classNamename="pop-browse__btn-browse">
+                <div classNamename="btn-group">
+                  <button classNamename="btn-browse__edit _btn-bor _hover03">
                     <a href="#">Редактировать задачу</a>
                   </button>
-                  <button class="btn-browse__delete _btn-bor _hover03">
+                  <button classNamename="btn-browse__delete _btn-bor _hover03">
                     <a href="#">Удалить задачу</a>
                   </button>
                 </div>
-                <button class="btn-browse__close _btn-bg _hover01">
+                <button classNamename="btn-browse__close _btn-bg _hover01">
                   <a href="#">Закрыть</a>
                 </button>
               </div>
-              <div class="pop-browse__btn-edit _hide">
-                <div class="btn-group">
-                  <button class="btn-edit__edit _btn-bg _hover01">
+              <div classNamename="pop-browse__btn-edit _hide">
+                <div classNamename="btn-group">
+                  <button classNamename="btn-edit__edit _btn-bg _hover01">
                     <a href="#">Сохранить</a>
                   </button>
-                  <button class="btn-edit__edit _btn-bor _hover03">
+                  <button classNamename="btn-edit__edit _btn-bor _hover03">
                     <a href="#">Отменить</a>
                   </button>
                   <button
-                    class="btn-edit__delete _btn-bor _hover03"
+                    classNamename="btn-edit__delete _btn-bor _hover03"
                     id="btnDelete"
                   >
                     <a href="#">Удалить задачу</a>
                   </button>
                 </div>
-                <button class="btn-edit__close _btn-bg _hover01">
+                <button classNamename="btn-edit__close _btn-bg _hover01">
                   <a href="#">Закрыть</a>
                 </button>
               </div>
@@ -391,38 +460,45 @@
 
       <!-- pop-up end-->
 
-      <header class="header">
-        <div class="container">
-          <div class="header__block">
-            <div class="header__logo _show _light">
+      <header classNamename="header">
+        <div classNamename="container">
+          <div classNamename="header__block">
+            <div classNamename="header__logo _show _light">
               <a href="" target="_self"
                 ><img src="./images/logo.png" alt="logo"
               /></a>
             </div>
-            <div class="header__logo _dark">
+            <div classNamename="header__logo _dark">
               <a href="" target="_self"
                 ><img src="./images/logo_dark.png" alt="logo"
               /></a>
             </div>
-            <nav class="header__nav">
-              <button class="header__btn-main-new _hover01" id="btnMainNew">
+            <nav classNamename="header__nav">
+              <button
+                classNamename="header__btn-main-new _hover01"
+                id="btnMainNew"
+              >
                 <a href="#popNewCard">Создать новую задачу</a>
               </button>
-              <a href="#user-set-target" class="header__user _hover02"
+              <a href="#user-set-target" classNamename="header__user _hover02"
                 >Ivan Ivanov</a
               >
               <div
-                class="header__pop-user-set pop-user-set"
+                classNamename="header__pop-user-set pop-user-set"
                 id="user-set-target"
               >
                 <!-- <a href="">x</a> -->
-                <p class="pop-user-set__name">Ivan Ivanov</p>
-                <p class="pop-user-set__mail">ivan.ivanov@gmail.com</p>
-                <div class="pop-user-set__theme">
+                <p classNamename="pop-user-set__name">Ivan Ivanov</p>
+                <p classNamename="pop-user-set__mail">ivan.ivanov@gmail.com</p>
+                <div classNamename="pop-user-set__theme">
                   <p>Темная тема</p>
-                  <input type="checkbox" class="checkbox" name="checkbox" />
+                  <input
+                    type="checkbox"
+                    classNamename="checkbox"
+                    name="checkbox"
+                  />
                 </div>
-                <button type="button" class="_hover03">
+                <button type="button" classNamename="_hover03">
                   <a href="#popExit">Выйти</a>
                 </button>
               </div>
@@ -430,34 +506,34 @@
           </div>
         </div>
       </header>
-      <main class="main">
-        <div class="container">
-          <div class="main__block">
-            <div class="main__content">
-              <div class="main__column column">
-                <div class="column__title">
+      <main classNamename="main">
+        <div classNamename="container">
+          <div classNamename="main__block">
+            <div classNamename="main__content">
+              <div classNamename="main__column column">
+                <div classNamename="column__title">
                   <p>Без статуса</p>
                 </div>
-                <div class="cards">
-                  <div class="cards__item">
-                    <div class="cards__card card">
-                      <div class="card__group">
-                        <div class="card__theme _orange">
-                          <p class="_orange">Web Design</p>
+                <div classNamename="cards">
+                  <div classNamename="cards__item">
+                    <div classNamename="cards__card card">
+                      <div classNamename="card__group">
+                        <div classNamename="card__theme _orange">
+                          <p classNamename="_orange">Web Design</p>
                         </div>
                         <a href="#popBrowse" target="_self">
-                          <div class="card__btn">
+                          <div classNamename="card__btn">
                             <div></div>
                             <div></div>
                             <div></div>
                           </div>
                         </a>
                       </div>
-                      <div class="card__content">
+                      <div classNamename="card__content">
                         <a href="" target="_blank">
-                          <h3 class="card__title">Название задачи</h3>
+                          <h3 classNamename="card__title">Название задачи</h3>
                         </a>
-                        <div class="card__date">
+                        <div classNamename="card__date">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="13"
@@ -492,25 +568,25 @@
                     </div>
                   </div>
 
-                  <div class="cards__item">
-                    <div class="cards__card card">
-                      <div class="card__group">
-                        <div class="card__theme _green">
-                          <p class="_green">Research</p>
+                  <div classNamename="cards__item">
+                    <div classNamename="cards__card card">
+                      <div classNamename="card__group">
+                        <div classNamename="card__theme _green">
+                          <p classNamename="_green">Research</p>
                         </div>
                         <a href="#popBrowse" target="_self">
-                          <div class="card__btn">
+                          <div classNamename="card__btn">
                             <div></div>
                             <div></div>
                             <div></div>
                           </div>
                         </a>
                       </div>
-                      <div class="card__content">
+                      <div classNamename="card__content">
                         <a href="" target="_blank">
-                          <h3 class="card__title">Название задачи</h3>
+                          <h3 classNamename="card__title">Название задачи</h3>
                         </a>
-                        <div class="card__date">
+                        <div classNamename="card__date">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="13"
@@ -545,25 +621,25 @@
                     </div>
                   </div>
 
-                  <div class="cards__item">
-                    <div class="cards__card card">
-                      <div class="card__group">
-                        <div class="card__theme _orange">
-                          <p class="_orange">Web Design</p>
+                  <div classNamename="cards__item">
+                    <div classNamename="cards__card card">
+                      <div classNamename="card__group">
+                        <div classNamename="card__theme _orange">
+                          <p classNamename="_orange">Web Design</p>
                         </div>
                         <a href="#popBrowse" target="_self">
-                          <div class="card__btn">
+                          <div classNamename="card__btn">
                             <div></div>
                             <div></div>
                             <div></div>
                           </div>
                         </a>
                       </div>
-                      <div class="card__content">
+                      <div classNamename="card__content">
                         <a href="" target="_blank">
-                          <h3 class="card__title">Название задачи</h3>
+                          <h3 classNamename="card__title">Название задачи</h3>
                         </a>
-                        <div class="card__date">
+                        <div classNamename="card__date">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="13"
@@ -598,25 +674,25 @@
                     </div>
                   </div>
 
-                  <div class="cards__item">
-                    <div class="cards__card card">
-                      <div class="card__group">
-                        <div class="card__theme _purple">
-                          <p class="_purple">Copywriting</p>
+                  <div classNamename="cards__item">
+                    <div classNamename="cards__card card">
+                      <div classNamename="card__group">
+                        <div classNamename="card__theme _purple">
+                          <p classNamename="_purple">Copywriting</p>
                         </div>
                         <a href="#popBrowse" target="_self">
-                          <div class="card__btn">
+                          <div classNamename="card__btn">
                             <div></div>
                             <div></div>
                             <div></div>
                           </div>
                         </a>
                       </div>
-                      <div class="card__content">
+                      <div classNamename="card__content">
                         <a href="" target="_blank">
-                          <h3 class="card__title">Название задачи</h3>
+                          <h3 classNamename="card__title">Название задачи</h3>
                         </a>
-                        <div class="card__date">
+                        <div classNamename="card__date">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="13"
@@ -651,25 +727,25 @@
                     </div>
                   </div>
 
-                  <div class="cards__item">
-                    <div class="cards__card card">
-                      <div class="card__group">
-                        <div class="card__theme _orange">
-                          <p class="_orange">Web Design</p>
+                  <div classNamename="cards__item">
+                    <div classNamename="cards__card card">
+                      <div classNamename="card__group">
+                        <div classNamename="card__theme _orange">
+                          <p classNamename="_orange">Web Design</p>
                         </div>
                         <a href="#popBrowse" target="_self">
-                          <div class="card__btn">
+                          <div classNamename="card__btn">
                             <div></div>
                             <div></div>
                             <div></div>
                           </div>
                         </a>
                       </div>
-                      <div class="card__content">
+                      <div classNamename="card__content">
                         <a href="" target="_blank">
-                          <h3 class="card__title">Название задачи</h3>
+                          <h3 classNamename="card__title">Название задачи</h3>
                         </a>
-                        <div class="card__date">
+                        <div classNamename="card__date">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="13"
@@ -705,30 +781,30 @@
                   </div>
                 </div>
               </div>
-              <div class="main__column">
-                <div class="column__title">
+              <div classNamename="main__column">
+                <div classNamename="column__title">
                   <p>Нужно сделать</p>
                 </div>
-                <div class="cards">
-                  <div class="cards__item">
-                    <div class="cards__card card">
-                      <div class="card__group">
-                        <div class="card__theme _green">
-                          <p class="_green">Research</p>
+                <div classNamename="cards">
+                  <div classNamename="cards__item">
+                    <div classNamename="cards__card card">
+                      <div classNamename="card__group">
+                        <div classNamename="card__theme _green">
+                          <p classNamename="_green">Research</p>
                         </div>
                         <a href="#popBrowse" target="_self">
-                          <div class="card__btn">
+                          <div classNamename="card__btn">
                             <div></div>
                             <div></div>
                             <div></div>
                           </div>
                         </a>
                       </div>
-                      <div class="card__content">
+                      <div classNamename="card__content">
                         <a href="" target="_blank">
-                          <h3 class="card__title">Название задачи</h3>
+                          <h3 classNamename="card__title">Название задачи</h3>
                         </a>
-                        <div class="card__date">
+                        <div classNamename="card__date">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="13"
@@ -764,30 +840,30 @@
                   </div>
                 </div>
               </div>
-              <div class="main__column">
-                <div class="column__title">
+              <div classNamename="main__column">
+                <div classNamename="column__title">
                   <p>В работе</p>
                 </div>
-                <div class="cards">
-                  <div class="cards__item">
-                    <div class="cards__card card">
-                      <div class="card__group">
-                        <div class="card__theme _green">
-                          <p class="_green">Research</p>
+                <div classNamename="cards">
+                  <div classNamename="cards__item">
+                    <div classNamename="cards__card card">
+                      <div classNamename="card__group">
+                        <div classNamename="card__theme _green">
+                          <p classNamename="_green">Research</p>
                         </div>
                         <a href="#popBrowse" target="_self">
-                          <div class="card__btn">
+                          <div classNamename="card__btn">
                             <div></div>
                             <div></div>
                             <div></div>
                           </div>
                         </a>
                       </div>
-                      <div class="card__content">
+                      <div classNamename="card__content">
                         <a href="" target="_blank">
-                          <h3 class="card__title">Название задачи</h3>
+                          <h3 classNamename="card__title">Название задачи</h3>
                         </a>
-                        <div class="card__date">
+                        <div classNamename="card__date">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="13"
@@ -822,25 +898,25 @@
                     </div>
                   </div>
 
-                  <div class="cards__item">
-                    <div class="cards__card card">
-                      <div class="card__group">
-                        <div class="card__theme _purple">
-                          <p class="_purple">Copywriting</p>
+                  <div classNamename="cards__item">
+                    <div classNamename="cards__card card">
+                      <div classNamename="card__group">
+                        <div classNamename="card__theme _purple">
+                          <p classNamename="_purple">Copywriting</p>
                         </div>
                         <a href="#popBrowse" target="_self">
-                          <div class="card__btn">
+                          <div classNamename="card__btn">
                             <div></div>
                             <div></div>
                             <div></div>
                           </div>
                         </a>
                       </div>
-                      <div class="card__content">
+                      <div classNamename="card__content">
                         <a href="" target="_blank">
-                          <h3 class="card__title">Название задачи</h3>
+                          <h3 classNamename="card__title">Название задачи</h3>
                         </a>
-                        <div class="card__date">
+                        <div classNamename="card__date">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="13"
@@ -875,25 +951,25 @@
                     </div>
                   </div>
 
-                  <div class="cards__item">
-                    <div class="cards__card card">
-                      <div class="card__group">
-                        <div class="card__theme _orange">
-                          <p class="_orange">Web Design</p>
+                  <div classNamename="cards__item">
+                    <div classNamename="cards__card card">
+                      <div classNamename="card__group">
+                        <div classNamename="card__theme _orange">
+                          <p classNamename="_orange">Web Design</p>
                         </div>
                         <a href="#popBrowse" target="_self">
-                          <div class="card__btn">
+                          <div classNamename="card__btn">
                             <div></div>
                             <div></div>
                             <div></div>
                           </div>
                         </a>
                       </div>
-                      <div class="card__content">
+                      <div classNamename="card__content">
                         <a href="" target="_blank">
-                          <h3 class="card__title">Название задачи</h3>
+                          <h3 classNamename="card__title">Название задачи</h3>
                         </a>
-                        <div class="card__date">
+                        <div classNamename="card__date">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="13"
@@ -929,30 +1005,30 @@
                   </div>
                 </div>
               </div>
-              <div class="main__column">
-                <div class="column__title">
+              <div classNamename="main__column">
+                <div classNamename="column__title">
                   <p>Тестирование</p>
                 </div>
-                <div class="cards">
-                  <div class="cards__item">
-                    <div class="cards__card card">
-                      <div class="card__group">
-                        <div class="card__theme _green">
-                          <p class="_green">Research</p>
+                <div classNamename="cards">
+                  <div classNamename="cards__item">
+                    <div classNamename="cards__card card">
+                      <div classNamename="card__group">
+                        <div classNamename="card__theme _green">
+                          <p classNamename="_green">Research</p>
                         </div>
                         <a href="#popBrowse" target="_self">
-                          <div class="card__btn">
+                          <div classNamename="card__btn">
                             <div></div>
                             <div></div>
                             <div></div>
                           </div>
                         </a>
                       </div>
-                      <div class="card__content">
+                      <div classNamename="card__content">
                         <a href="" target="_blank">
-                          <h3 class="card__title">Название задачи</h3>
+                          <h3 classNamename="card__title">Название задачи</h3>
                         </a>
-                        <div class="card__date">
+                        <div classNamename="card__date">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="13"
@@ -988,30 +1064,30 @@
                   </div>
                 </div>
               </div>
-              <div class="main__column">
-                <div class="column__title">
+              <div classNamename="main__column">
+                <div classNamename="column__title">
                   <p>Готово</p>
                 </div>
-                <div class="cards">
-                  <div class="cards__item">
-                    <div class="cards__card card">
-                      <div class="card__group">
-                        <div class="card__theme _green">
-                          <p class="_green">Research</p>
+                <div classNamename="cards">
+                  <div classNamename="cards__item">
+                    <div classNamename="cards__card card">
+                      <div classNamename="card__group">
+                        <div classNamename="card__theme _green">
+                          <p classNamename="_green">Research</p>
                         </div>
                         <a href="#popBrowse" target="_self">
-                          <div class="card__btn">
+                          <div classNamename="card__btn">
                             <div></div>
                             <div></div>
                             <div></div>
                           </div>
                         </a>
                       </div>
-                      <div class="card__content">
+                      <div classNamename="card__content">
                         <a href="" target="_blank">
-                          <h3 class="card__title">Название задачи</h3>
+                          <h3 classNamename="card__title">Название задачи</h3>
                         </a>
-                        <div class="card__date">
+                        <div classNamename="card__date">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="13"

@@ -1,12 +1,13 @@
 import Column from "../Column/Column.jsx";
 import { statusList } from "../../data";
+import * as S from "./main.styled.js";
 
 const Main = ({ cards }) => {
   return (
-    <main className="main">
+    <S.Main>
       <div className="container">
-        <div className="main__block">
-          <div className="main__content">
+        <S.MainBlock>
+          <S.MainContent>
             {statusList.map((status) => (
               <Column
                 key={status}
@@ -14,10 +15,10 @@ const Main = ({ cards }) => {
                 cardList={cards.filter((card) => card.status === status)}
               />
             ))}
-          </div>
-        </div>
+          </S.MainContent>
+        </S.MainBlock>
       </div>
-    </main>
+    </S.Main>
   );
 };
 export default Main;

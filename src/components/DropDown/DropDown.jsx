@@ -1,34 +1,38 @@
 import { useState } from "react";
+import { HeaderNav } from "../Header/header.styled";
+import * as S from "./DropDown.styled";
+import { Link } from "react-router-dom";
 
 const DropDownUserSet = () => {
-  const [isOPen, setIsOpen] = useState(false);
-  const toggleDropDown = () => {
-    setIsOpen((prevState) => !prevState);
-  };
+  const [isOpened, setIsOpened] = useState(false);
+  const [isOpenedPopUpExit, setIsOpenedPopUpExit] = useState(false);
+
+  function togglePopUpExit() {
+    setIsOpenedPopUpExit((isOpenedPopUpExit) => !isOpenedPopUpExit);
+  }
+
+  function togglePopUp() {
+    setIsOpened((isOpened) => !isOpened);
+  }
+
   return (
-    <nav className="header__nav">
-      <a
-        href="#user-set-target"
-        className="header__user _hover02"
-        onClick={toggleDropDown}
-      >
-        Ivan Ivanov
-      </a>
-      {isOPen && (
-        <div className="header__pop-user-set pop-user-set" id="user-set-target">
-          {/*  <!-- <a href="">x</a> --> */}
-          <p className="pop-user-set__name">Ivan Ivanov</p>
-          <p className="pop-user-set__mail">ivan.ivanov@gmail.com</p>
-          <div className="pop-user-set__theme">
+    <HeaderNav>
+      <S.HeaderUser onClick={togglePopUp}>Ivan Ivanov</S.HeaderUser>
+      {isOpenedPopUpExit && <S.PopExit />}
+      {isOpened && (
+        <S.HeaderPopUserSet>
+          <S.PopUserSetName>Ivan Ivanov</S.PopUserSetName>
+          <S.PopUserSetMail>ivan.ivanov@gmail.com</S.PopUserSetMail>
+          <S.PopUserSetTheme>
             <p>Темная тема</p>
-            <input type="checkbox" className="checkbox" name="checkbox" />
-          </div>
-          <button type="button" className="_hover03">
-            <a href="#popExit">Выйти</a>
-          </button>
-        </div>
+            <S.PopUserSetThemeInput type="checkbox" name="checkbox" />
+          </S.PopUserSetTheme>
+          <S.ExitButtonHeader onClick={togglePopUpExit}>
+            <Link to={"/exit"}>Выйти</Link>
+          </S.ExitButtonHeader>
+        </S.HeaderPopUserSet>
       )}
-    </nav>
+    </HeaderNav>
   );
 };
 

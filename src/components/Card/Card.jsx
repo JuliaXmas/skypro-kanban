@@ -1,30 +1,35 @@
+import * as S from "./Card.styled";
+import { Link } from "react-router-dom";
+
 // eslint-disable-next-line react/prop-types
-const Card = ({ topic, title, date }) => {
+const Card = ({ topic, title, date, id }) => {
   const colors = {
     "Web Design": "_orange",
     Copywriting: "_purple",
     Research: "_green",
+    "Без статуса": "_gray",
   };
+
   return (
-    <div className="cards__item">
-      <div className="cards__card card">
-        <div className="card__group">
-          <div className={`card__theme ${colors[topic]}`}>
-            <p>{topic}</p>
-          </div>
-          <a href="#popBrowse" target="_self">
+    <S.CardsBlock>
+      <S.Cards>
+        <S.CardBlock>
+          <S.CardTheme $color={colors[topic]}>
+            <S.CardTopic>{topic}</S.CardTopic>
+          </S.CardTheme>
+          <Link to={`/card/${id}`}>
             <div className="card__btn">
               <div></div>
               <div></div>
               <div></div>
             </div>
-          </a>
-        </div>
-        <div className="card__content">
-          <a href="" target="_blank">
+          </Link>
+        </S.CardBlock>
+        <S.CardContent>
+          <Link to={`/card/${id}`}>
             <h3 className="card__title">{title}</h3>
-          </a>
-          <div className="card__date">
+          </Link>
+          <S.CardDate>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="13"
@@ -54,10 +59,10 @@ const Card = ({ topic, title, date }) => {
               </defs>
             </svg>
             <p>{date}</p>
-          </div>
-        </div>
-      </div>
-    </div>
+          </S.CardDate>
+        </S.CardContent>
+      </S.Cards>
+    </S.CardsBlock>
   );
 };
 
