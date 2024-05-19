@@ -14,7 +14,7 @@ import { cardList } from "./data.js";
 import NewCard from "./pages/NewCardPage.jsx";
 
 function App() {
-  const [isAuth, setIsAuth] = useState(true);
+  const [isAuth, setIsAuth] = useState(false);
   const [cards, setCards] = useState(cardList);
 
   return (

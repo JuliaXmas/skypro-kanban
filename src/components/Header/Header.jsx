@@ -2,8 +2,7 @@ import DropDownUserSet from "../DropDown/DropDown.jsx";
 import * as S from "./header.styled.js";
 import { Link } from "react-router-dom";
 
-
-const Header = ({ addCard }) => {
+const Header = () => {
   return (
     <S.Header>
       <div className="container">
@@ -19,7 +18,7 @@ const Header = ({ addCard }) => {
             </a>
           </div>
           <S.HeaderNav>
-            <S.HeaderBtnMainNew onClick={addCard}>
+            <S.HeaderBtnMainNew>
               <Link to={"/newcard"}>Создать новую задачу</Link>
             </S.HeaderBtnMainNew>
 
