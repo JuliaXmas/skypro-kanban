@@ -1,23 +1,34 @@
+import { useState } from "react";
 import * as S from "./Sign.styled";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { login } from "../../api";
 
-const UserLogin = ({ login }) => {
-  let navigate = useNavigate();
+function UserLogin() {
+  const loginForm = {
+    login: "",
+    password: "",
+  };
 
-  function goToReg() {
-    navigate("/register");
-  }
+  const [loginData, setLoginData] = useState(loginForm);
 
-  function onLogin() {
-    login(true);
-    navigate("/");
-  }
+  const handleLogin = async (event) => {
+    event.preventDefault();
+    login(loginData)
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
-  function handleKeyPress(event) {
-    if (event.key === "Enter") {
-      onLogin();
-    }
-  }
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setLoginData({
+      ...loginData,
+      [name]: value,
+    });
+  };
 
   return (
     <S.SignWrapper>
@@ -27,29 +38,29 @@ const UserLogin = ({ login }) => {
             <S.SignModalTtlH2>
               <h2>Вход</h2>
             </S.SignModalTtlH2>
-            <S.SignFormLogin
-              id="formLogIn"
-              action="#"
-              onKeyDown={handleKeyPress}
-            >
+            <S.SignFormLogin id="formLogIn" action="#">
               <S.SignInput
                 type="text"
-                name="login"
                 id="formlogin"
                 placeholder="Эл. почта"
+                value={loginData.login}
+                onChange={handleInputChange}
+                name="login"
               />
               <S.SignInput
-                type="password"
+                value={loginData.password}
+                onChange={handleInputChange}
                 name="password"
+                type="password"
                 id="formpassword"
                 placeholder="Пароль"
               />
-              <S.SignBtnEnt id="btnEnter">
-                <Link onClick={onLogin}>Войти</Link>
+              <S.SignBtnEnt id="btnEnter" onClick={handleLogin}>
+                Войти
               </S.SignBtnEnt>
               <S.SignFromGroup>
                 <p>Нужно зарегистрироваться?</p>
-                <Link onClick={goToReg}>Регистрируйтесь здесь</Link>
+                <Link to={"/register"}>Регистрируйтесь здесь</Link>
               </S.SignFromGroup>
             </S.SignFormLogin>
           </S.SignModalBlock>
@@ -57,6 +68,6 @@ const UserLogin = ({ login }) => {
       </S.SignContainer>
     </S.SignWrapper>
   );
-};
+}
 
 export default UserLogin;
