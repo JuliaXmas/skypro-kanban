@@ -10,11 +10,10 @@ import CurrentCard from "./pages/CardPage.jsx";
 import ExitPage from "./pages/ExitPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
-import { cardList } from "./data.js";
 import NewCard from "./pages/NewCardPage.jsx";
 
 function App() {
-  const [cards, setCards] = useState(cardList);
+  const [cards, setCards] = useState(null);
   const [userData, setUserData] = useState(null);
   return (
     <Wrapper>

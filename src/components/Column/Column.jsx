@@ -11,8 +11,8 @@ const Column = ({ title, cardList }) => {
       <div className="cards">
         {cardList.map((card) => (
           <Card
-            key={card.id}
-            id={card.id}
+            key={card._id}
+            id={card._id}
             topic={card.topic}
             title={card.title}
             date={new Date().toLocaleDateString()}
