@@ -14,21 +14,22 @@ import { cardList } from "./data.js";
 import NewCard from "./pages/NewCardPage.jsx";
 
 function App() {
-  const [isAuth, setIsAuth] = useState(false);
   const [cards, setCards] = useState(cardList);
-
+  const [userData, setUserData] = useState(null);
   return (
     <Wrapper>
       <GlobalStyle />
 
       <Routes>
-        <Route element={<PrivateRoute isAuth={isAuth} />}>
+        <Route element={<PrivateRoute isAuth={userData} />}>
           <Route
             path="/"
-            element={<HomePage cards={cards} setCards={setCards} />}
+            element={
+              <HomePage cards={cards} setCards={setCards} userData={userData} />
+            }
           >
             <Route path="/card/:id" element={<CurrentCard />} />
-            <Route path="/exit" element={<ExitPage setLogin={setIsAuth} />} />
+            <Route path="/exit" element={<ExitPage setLogin={userData} />} />
             <Route
               path="/newcard"
               element={<NewCard cards={cards} setCards={setCards} />}
@@ -36,7 +37,10 @@ function App() {
           </Route>
         </Route>
 
-        <Route path="/login" element={<UserLogin login={setIsAuth} />} />
+        <Route
+          path="/login"
+          element={<UserLogin setUserData={setUserData} />}
+        />
         <Route path="/register" element={<UserSignup />} />
 
         <Route path="*" element={<NotFoundPage />} />

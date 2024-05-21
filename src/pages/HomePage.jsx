@@ -3,16 +3,24 @@ import { Outlet } from "react-router-dom";
 import Main from "../components/Main/Main.jsx";
 import Header from "../components/Header/Header.jsx";
 import * as S from "../preloader.styled.js";
+import { getTasks } from "../api.js";
+import { Wrapper } from "../App.styled.js";
 
-function HomePage({ cards }) {
+function HomePage({ cards, setCards, userData }) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setIsLoading(false), 500);
-  }, []);
+    getTasks({ token: userData.token })
+      .then((data) => {
+        setCards(data.tasks);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  }, [setCards, userData.token]);
 
   return (
-    <div className="wrapper">
+    <Wrapper>
       <Header />
 
       {isLoading ? (
@@ -26,7 +34,7 @@ function HomePage({ cards }) {
       )}
 
       <Outlet />
-    </div>
+    </Wrapper>
   );
 }
 

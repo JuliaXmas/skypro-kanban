@@ -1,9 +1,11 @@
 import { useState } from "react";
 import * as S from "./Sign.styled";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { login } from "../../api";
 
-function UserLogin() {
+function UserLogin({ setUserData }) {
+  let navigate = useNavigate();
+
   const loginForm = {
     login: "",
     password: "",
@@ -13,9 +15,13 @@ function UserLogin() {
 
   const handleLogin = async (event) => {
     event.preventDefault();
-    login(loginData)
+    await login(loginData)
       .then((data) => {
         console.log(data);
+        setUserData(data.user);
+      })
+      .then(() => {
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);

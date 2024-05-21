@@ -1,7 +1,6 @@
 import ExitPopup from "../components/popups/Exit/Exit";
 
-function ExitPage({ goToLogin }) {
-  return <ExitPopup logOut={goToLogin} />;
+function ExitPage({ setLogin }) {
+  return <ExitPopup logOut={setLogin} />;
 }
-
 export default ExitPage;
