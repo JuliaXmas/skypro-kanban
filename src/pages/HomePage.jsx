@@ -30,7 +30,7 @@ function HomePage({ cards, setCards, userData }) {
           </S.PreloaderLoader>
         </S.Preloader>
       ) : (
-        <Main cards={cards} />
+        <Main isLoading= {isLoading} cards={cards} />
       )}
 
       <Outlet />

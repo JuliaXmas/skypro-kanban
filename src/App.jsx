@@ -28,7 +28,7 @@ function App() {
             }
           >
             <Route path="/card/:id" element={<CurrentCard />} />
-            <Route path="/exit" element={<ExitPage setLogin={userData} />} />
+            <Route path="/exit" element={<ExitPage setLogin={setUserData} />} />
             <Route
               path="/newcard"
               element={<NewCard cards={cards} setCards={setCards} />}

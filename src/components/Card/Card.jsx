@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const Card = ({ topic, title, date, id }) => {
-  
+  console.log(id);
   const colors = {
     "Web Design": "_orange",
     Copywriting: "_purple",

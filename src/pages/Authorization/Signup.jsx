@@ -1,13 +1,7 @@
 import * as S from "./Sign.styled";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const UserSignup = () => {
-  let navigate = useNavigate();
-
-  function goToLogin() {
-    navigate("/login");
-  }
-
   return (
     <S.SignWrapper>
       <S.SignContainer>
@@ -42,10 +36,7 @@ const UserSignup = () => {
               </S.SignBtnEnt>
               <S.SignFromGroup>
                 <p>
-                  Уже есть аккаунт?{" "}
-                  <Link onClick={goToLogin}>
-                    Войдите здесь
-                  </Link>
+                  Уже есть аккаунт? <Link to={"/login"}>Войдите здесь</Link>
                 </p>
               </S.SignFromGroup>
             </S.SignFormLogin>
