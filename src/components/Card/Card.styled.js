@@ -53,14 +53,14 @@ export const CardBlock = styled.div`
     align-items: center;
     justify-content: space-between;
   }
+`;
 
-  &title {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 18px;
-    color: #000000;
-    margin-bottom: 10px;
-  }
+export const CardTitle = styled.h3`
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #000000;
+  margin-bottom: 10px;
 `;
 
 export const CardButton = styled.div`

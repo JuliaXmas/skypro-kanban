@@ -28,7 +28,7 @@ const Card = ({ topic, title, date, id }) => {
         </S.CardBlock>
         <S.CardContent>
           <Link to={`/card/${id}`}>
-            <h3 className="card__title">{title}</h3>
+            <S.CardTitle>{title}</S.CardTitle>
           </Link>
           <S.CardDate>
             <svg
