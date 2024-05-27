@@ -1,7 +1,42 @@
+import { useState } from "react";
+import { signup } from "../../api";
 import * as S from "./Sign.styled";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const UserSignup = () => {
+const UserSignup = ({ setSignupUserData }) => {
+  let navigate = useNavigate();
+
+  const signupForm = {
+    name: "",
+    login: "",
+    password: "",
+  };
+
+  const [signupData, setSignupData] = useState(signupForm);
+
+  const handleSignup = async (event) => {
+    event.preventDefault();
+    await signup(signupData)
+      .then((data) => {
+        console.log(data);
+        setSignupUserData(data.user);
+      })
+      .then(() => {
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setSignupData({
+      ...signupData,
+      [name]: value,
+    });
+  };
+
   return (
     <S.SignWrapper>
       <S.SignContainer>
@@ -13,25 +48,29 @@ const UserSignup = () => {
             <S.SignFormLogin id="formLogUp" action="#">
               <S.SignInput
                 type="text"
-                name="first-name"
-                id="first-name"
-                placeholder="Имя"
+                id="formname"
+                placeholder="text"
+                value={signupData.name}
+                onChange={handleInputChange}
+                name="name"
               />
               <S.SignInput
-                className="modal__input login"
                 type="text"
-                name="login"
-                id="loginReg"
+                id="formlogin"
                 placeholder="Эл. почта"
+                value={signupData.login}
+                onChange={handleInputChange}
+                name="login"
               />
               <S.SignInput
-                className="modal__input password-first"
-                type="password"
+                value={signupData.password}
+                onChange={handleInputChange}
                 name="password"
-                id="passwordFirst"
+                type="password"
+                id="formpassword"
                 placeholder="Пароль"
               />
-              <S.SignBtnEnt id="SignUpEnter">
+              <S.SignBtnEnt id="SignUpEnter" onClick={handleSignup}>
                 <Link>Зарегистрироваться</Link>
               </S.SignBtnEnt>
               <S.SignFromGroup>

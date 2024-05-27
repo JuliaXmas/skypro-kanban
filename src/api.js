@@ -13,6 +13,19 @@ export async function login({ login, password }) {
   return data;
 }
 
+export async function signup({ name, login, password }) {
+  const response = await fetch(API_URL_USER, {
+    method: "POST",
+    body: JSON.stringify({
+      name,
+      login,
+      password,
+    }),
+  });
+  const data = await response.json();
+  return data;
+}
+
 export async function getTasks({ token }) {
   const response = await fetch(API_URL, {
     method: "GET",
