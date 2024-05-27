@@ -9,6 +9,11 @@ export async function login({ login, password }) {
       password,
     }),
   });
+
+  if (!response.ok) {
+    throw new Error("Не верный логин или пароль");
+  }
+
   const data = await response.json();
   return data;
 }
@@ -22,6 +27,11 @@ export async function signup({ name, login, password }) {
       password,
     }),
   });
+
+  if (!response.ok) {
+    throw new Error("Пользователь с таким именем существует");
+  }
+
   const data = await response.json();
   return data;
 }

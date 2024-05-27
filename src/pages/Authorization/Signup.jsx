@@ -3,7 +3,7 @@ import { signup } from "../../api";
 import * as S from "./Sign.styled";
 import { Link, useNavigate } from "react-router-dom";
 
-const UserSignup = ({ setSignupUserData }) => {
+const UserSignup = () => {
   let navigate = useNavigate();
 
   const signupForm = {
@@ -19,7 +19,6 @@ const UserSignup = ({ setSignupUserData }) => {
     await signup(signupData)
       .then((data) => {
         console.log(data);
-        setSignupUserData(data.user);
       })
       .then(() => {
         navigate("/");
