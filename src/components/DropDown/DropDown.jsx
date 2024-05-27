@@ -3,7 +3,7 @@ import { HeaderNav } from "../Header/header.styled";
 import * as S from "./DropDown.styled";
 import { Link } from "react-router-dom";
 
-const DropDownUserSet = () => {
+const DropDownUserSet = ({ goToLogin }) => {
   const [isOpened, setIsOpened] = useState(false);
   const [isOpenedPopUpExit, setIsOpenedPopUpExit] = useState(false);
 
@@ -28,7 +28,7 @@ const DropDownUserSet = () => {
             <S.PopUserSetThemeInput type="checkbox" name="checkbox" />
           </S.PopUserSetTheme>
           <S.ExitButtonHeader onClick={togglePopUpExit}>
-            <Link to={"/exit"}>Выйти</Link>
+            <Link onClick={goToLogin}>Выйти</Link>
           </S.ExitButtonHeader>
         </S.HeaderPopUserSet>
       )}

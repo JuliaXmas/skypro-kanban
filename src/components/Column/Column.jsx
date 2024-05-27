@@ -16,6 +16,7 @@ const Column = ({ title, cardList }) => {
             topic={card.topic}
             title={card.title}
             date={new Date().toLocaleDateString()}
+            status={card.status}
           />
         ))}
       </div>

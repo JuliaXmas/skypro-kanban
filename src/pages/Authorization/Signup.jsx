@@ -1,5 +1,5 @@
 import * as S from "./Sign.styled";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const UserSignup = () => {
   let navigate = useNavigate();
@@ -38,14 +38,14 @@ const UserSignup = () => {
                 placeholder="Пароль"
               />
               <S.SignBtnEnt id="SignUpEnter">
-                <a href="../main.html">Зарегистрироваться</a>
+                <Link>Зарегистрироваться</Link>
               </S.SignBtnEnt>
               <S.SignFromGroup>
                 <p>
                   Уже есть аккаунт?{" "}
-                  <a href="signin.html" onClick={goToLogin}>
+                  <Link onClick={goToLogin}>
                     Войдите здесь
-                  </a>
+                  </Link>
                 </p>
               </S.SignFromGroup>
             </S.SignFormLogin>

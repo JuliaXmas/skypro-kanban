@@ -8,13 +8,13 @@ import UserSignup from "./pages/Authorization/Signup.jsx";
 import PrivateRoute from "./pages/PrivateRoute.jsx";
 import CurrentCard from "./pages/CardPage.jsx";
 import ExitPage from "./pages/ExitPage.jsx";
-// import NotFoundPage from "./pages/NotFoundPage.jsx";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import { cardList } from "./data.js";
 import NewCard from "./pages/NewCardPage.jsx";
 
 function App() {
-  const [isAuth, setIsAuth] = useState(true);
+  const [isAuth, setIsAuth] = useState(false);
   const [cards, setCards] = useState(cardList);
 
   return (
@@ -39,7 +39,7 @@ function App() {
         <Route path="/login" element={<UserLogin login={setIsAuth} />} />
         <Route path="/register" element={<UserSignup />} />
 
-        {/* <Route path="*" element={<NotFoundPage />} /> */}
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Wrapper>
   );
