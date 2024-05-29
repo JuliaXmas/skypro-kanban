@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const DropDownUserSet = () => {
   const [isOpened, setIsOpened] = useState(false);
-  const [isOpenedPopUpExit, setIsOpenedPopUpExit] = useState(false);
+  const [setIsOpenedPopUpExit] = useState(false);
 
   function togglePopUpExit() {
     setIsOpenedPopUpExit((isOpenedPopUpExit) => !isOpenedPopUpExit);
