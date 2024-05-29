@@ -7,17 +7,23 @@ import { getTasks } from "../api.js";
 import { Wrapper } from "../App.styled.js";
 
 function HomePage({ cards, setCards, userData }) {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
+    setIsLoading(true);
     getTasks({ token: userData.token })
       .then((data) => {
+        console.log(data);
         setCards(data.tasks);
+      })
+      .catch((err) => {
+        setError(err.message);
       })
       .finally(() => {
         setIsLoading(false);
       });
-  }, [setCards, userData.token]);
+  }, [userData.token]);
 
   return (
     <Wrapper>
@@ -30,7 +36,7 @@ function HomePage({ cards, setCards, userData }) {
           </S.PreloaderLoader>
         </S.Preloader>
       ) : (
-        <Main isLoading= {isLoading} cards={cards} />
+        <Main isLoading={isLoading} cards={cards} error={error} />
       )}
 
       <Outlet />

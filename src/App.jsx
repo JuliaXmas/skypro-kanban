@@ -13,7 +13,7 @@ import HomePage from "./pages/HomePage.jsx";
 import NewCard from "./pages/NewCardPage.jsx";
 
 function App() {
-  const [cards, setCards] = useState(null);
+  const [cards, setCards] = useState([]);
   const [userData, setUserData] = useState(null);
   return (
     <Wrapper>

@@ -18,7 +18,7 @@ const DropDownUserSet = () => {
   return (
     <HeaderNav>
       <S.HeaderUser onClick={togglePopUp}>Ivan Ivanov</S.HeaderUser>
-      {isOpenedPopUpExit && <S.PopExit />}
+      {/* {isOpenedPopUpExit && <S.PopExit />} */}
       {isOpened && (
         <S.HeaderPopUserSet>
           <S.PopUserSetName>Ivan Ivanov</S.PopUserSetName>
@@ -28,7 +28,7 @@ const DropDownUserSet = () => {
             <S.PopUserSetThemeInput type="checkbox" name="checkbox" />
           </S.PopUserSetTheme>
           <S.ExitButtonHeader onClick={togglePopUpExit}>
-            <Link to={"/login"}>Выйти</Link>
+            <Link to={"/exit"}>Выйти</Link>
           </S.ExitButtonHeader>
         </S.HeaderPopUserSet>
       )}

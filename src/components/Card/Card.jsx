@@ -10,6 +10,7 @@ const Card = ({ topic, title, date, id }) => {
     Research: "_green",
     "Без статуса": "_gray",
   };
+  
 
   return (
     <S.CardsBlock>

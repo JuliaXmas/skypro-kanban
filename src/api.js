@@ -44,6 +44,10 @@ export async function getTasks({ token }) {
     },
   });
 
+  if (!response.ok) {
+    throw new Error("Ошибка");
+  }
+
   const data = await response.json();
   return data;
 }
