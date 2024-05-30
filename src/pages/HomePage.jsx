@@ -8,7 +8,7 @@ import { Wrapper } from "../App.styled.js";
 
 function HomePage({ cards, setCards, userData }) {
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     setIsLoading(true);

@@ -5,6 +5,7 @@ import { login } from "../../api";
 
 function UserLogin({ setUserData }) {
   let navigate = useNavigate();
+  const [error, setError] = useState("");
 
   const loginForm = {
     login: "",
@@ -24,10 +25,8 @@ function UserLogin({ setUserData }) {
         navigate("/");
       })
       .catch((error) => {
-        console.log(error);
-        
-      })
-     
+        setError(error.message);
+      });
   };
 
   const handleInputChange = (e) => {
@@ -63,6 +62,7 @@ function UserLogin({ setUserData }) {
                 id="formpassword"
                 placeholder="Пароль"
               />
+              {error && <p>{error}</p>}
               <S.SignBtnEnt id="btnEnter" onClick={handleLogin}>
                 Войти
               </S.SignBtnEnt>

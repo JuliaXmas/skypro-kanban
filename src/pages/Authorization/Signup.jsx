@@ -4,6 +4,7 @@ import * as S from "./Sign.styled";
 import { Link, useNavigate } from "react-router-dom";
 
 const UserSignup = () => {
+  const [error, setError] = useState("");
   let navigate = useNavigate();
 
   const signupForm = {
@@ -24,7 +25,7 @@ const UserSignup = () => {
         navigate("/");
       })
       .catch((error) => {
-        console.log(error);
+        setError(error.message);
       });
   };
 
@@ -48,7 +49,7 @@ const UserSignup = () => {
               <S.SignInput
                 type="text"
                 id="formname"
-                placeholder="text"
+                placeholder="Имя"
                 value={signupData.name}
                 onChange={handleInputChange}
                 name="name"
@@ -69,6 +70,7 @@ const UserSignup = () => {
                 id="formpassword"
                 placeholder="Пароль"
               />
+              {error && <p>{error}</p>}
               <S.SignBtnEnt id="SignUpEnter" onClick={handleSignup}>
                 <Link>Зарегистрироваться</Link>
               </S.SignBtnEnt>

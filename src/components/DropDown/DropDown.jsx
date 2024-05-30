@@ -5,11 +5,6 @@ import { Link } from "react-router-dom";
 
 const DropDownUserSet = () => {
   const [isOpened, setIsOpened] = useState(false);
-  const [setIsOpenedPopUpExit] = useState(false);
-
-  function togglePopUpExit() {
-    setIsOpenedPopUpExit((isOpenedPopUpExit) => !isOpenedPopUpExit);
-  }
 
   function togglePopUp() {
     setIsOpened((isOpened) => !isOpened);
@@ -27,7 +22,7 @@ const DropDownUserSet = () => {
             <p>Темная тема</p>
             <S.PopUserSetThemeInput type="checkbox" name="checkbox" />
           </S.PopUserSetTheme>
-          <S.ExitButtonHeader onClick={togglePopUpExit}>
+          <S.ExitButtonHeader onClick={togglePopUp}>
             <Link to={"/exit"}>Выйти</Link>
           </S.ExitButtonHeader>
         </S.HeaderPopUserSet>
