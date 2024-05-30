@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const Card = ({ topic, title, date, id }) => {
-  
+  console.log(id);
   const colors = {
     "Web Design": "_orange",
     Copywriting: "_purple",
     Research: "_green",
     "Без статуса": "_gray",
   };
+  
 
   return (
     <S.CardsBlock>
@@ -28,7 +29,7 @@ const Card = ({ topic, title, date, id }) => {
         </S.CardBlock>
         <S.CardContent>
           <Link to={`/card/${id}`}>
-            <h3 className="card__title">{title}</h3>
+            <S.CardTitle>{title}</S.CardTitle>
           </Link>
           <S.CardDate>
             <svg

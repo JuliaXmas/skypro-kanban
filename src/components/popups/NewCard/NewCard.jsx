@@ -8,6 +8,7 @@ const NewCardPopup = ({ addCard, cards, setCards }) => {
   function handleCloseBtn() {
     navigate("/");
   }
+  
   return (
     <PopupNewCard>
       <div className="pop-new-card__container">

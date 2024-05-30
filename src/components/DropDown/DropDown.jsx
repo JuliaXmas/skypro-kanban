@@ -3,13 +3,8 @@ import { HeaderNav } from "../Header/header.styled";
 import * as S from "./DropDown.styled";
 import { Link } from "react-router-dom";
 
-const DropDownUserSet = ({ goToLogin }) => {
+const DropDownUserSet = () => {
   const [isOpened, setIsOpened] = useState(false);
-  const [isOpenedPopUpExit, setIsOpenedPopUpExit] = useState(false);
-
-  function togglePopUpExit() {
-    setIsOpenedPopUpExit((isOpenedPopUpExit) => !isOpenedPopUpExit);
-  }
 
   function togglePopUp() {
     setIsOpened((isOpened) => !isOpened);
@@ -18,7 +13,7 @@ const DropDownUserSet = ({ goToLogin }) => {
   return (
     <HeaderNav>
       <S.HeaderUser onClick={togglePopUp}>Ivan Ivanov</S.HeaderUser>
-      {isOpenedPopUpExit && <S.PopExit />}
+      {/* {isOpenedPopUpExit && <S.PopExit />} */}
       {isOpened && (
         <S.HeaderPopUserSet>
           <S.PopUserSetName>Ivan Ivanov</S.PopUserSetName>
@@ -27,8 +22,8 @@ const DropDownUserSet = ({ goToLogin }) => {
             <p>Темная тема</p>
             <S.PopUserSetThemeInput type="checkbox" name="checkbox" />
           </S.PopUserSetTheme>
-          <S.ExitButtonHeader onClick={togglePopUpExit}>
-            <Link onClick={goToLogin}>Выйти</Link>
+          <S.ExitButtonHeader onClick={togglePopUp}>
+            <Link to={"/exit"}>Выйти</Link>
           </S.ExitButtonHeader>
         </S.HeaderPopUserSet>
       )}

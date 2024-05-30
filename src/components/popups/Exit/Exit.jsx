@@ -1,10 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
 
-const PopExit = ({ logOut }) => {
+const PopExit = ({ setLogin }) => {
   let navigate = useNavigate();
 
   function handleSubmit() {
-    logOut();
+    setLogin(null);
     navigate("/login");
   }
 

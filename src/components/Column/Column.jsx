@@ -9,14 +9,13 @@ const Column = ({ title, cardList }) => {
         <S.ColumnTitle>{title}</S.ColumnTitle>
       </div>
       <div className="cards">
-        {cardList.map((card) => (
+        {cardList?.map((card) => (
           <Card
-            key={card.id}
-            id={card.id}
+            key={card._id}
+            id={card._id}
             topic={card.topic}
             title={card.title}
             date={new Date().toLocaleDateString()}
-            status={card.status}
           />
         ))}
       </div>

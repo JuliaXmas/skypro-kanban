@@ -3,16 +3,30 @@ import { Outlet } from "react-router-dom";
 import Main from "../components/Main/Main.jsx";
 import Header from "../components/Header/Header.jsx";
 import * as S from "../preloader.styled.js";
+import { getTasks } from "../api.js";
+import { Wrapper } from "../App.styled.js";
 
-function HomePage({ cards }) {
-  const [isLoading, setIsLoading] = useState(true);
+function HomePage({ cards, setCards, userData }) {
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    setTimeout(() => setIsLoading(false), 500);
-  }, []);
+    setIsLoading(true);
+    getTasks({ token: userData.token })
+      .then((data) => {
+        console.log(data);
+        setCards(data.tasks);
+      })
+      .catch((err) => {
+        setError(err.message);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  }, [userData.token]);
 
   return (
-    <div className="wrapper">
+    <Wrapper>
       <Header />
 
       {isLoading ? (
@@ -22,11 +36,11 @@ function HomePage({ cards }) {
           </S.PreloaderLoader>
         </S.Preloader>
       ) : (
-        <Main cards={cards} />
+        <Main isLoading={isLoading} cards={cards} error={error} />
       )}
 
       <Outlet />
-    </div>
+    </Wrapper>
   );
 }
 

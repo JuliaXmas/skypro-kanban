@@ -11,9 +11,9 @@ function NewCard({ cards, setCards }) {
 
   function addCard() {
     const newCard = {
-      id: cards.length + 1,
-      category: cards[cards.length - 1].category || "Без кактегории",
-      title: "Самая новая задача",
+      _id: cards.length + 1,
+      topic: cards[cards.length - 1]?.topic || "Без статуса",
+      title: "Новая задача",
       date: new Date().toLocaleDateString(),
       status: statusList[0],
     };

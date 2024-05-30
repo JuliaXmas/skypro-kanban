@@ -1,12 +1,41 @@
+import { useState } from "react";
+import { signup } from "../../api";
 import * as S from "./Sign.styled";
 import { Link, useNavigate } from "react-router-dom";
 
 const UserSignup = () => {
+  const [error, setError] = useState("");
   let navigate = useNavigate();
 
-  function goToLogin() {
-    navigate("/login");
-  }
+  const signupForm = {
+    name: "",
+    login: "",
+    password: "",
+  };
+
+  const [signupData, setSignupData] = useState(signupForm);
+
+  const handleSignup = async (event) => {
+    event.preventDefault();
+    await signup(signupData)
+      .then((data) => {
+        console.log(data);
+      })
+      .then(() => {
+        navigate("/");
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setSignupData({
+      ...signupData,
+      [name]: value,
+    });
+  };
 
   return (
     <S.SignWrapper>
@@ -19,33 +48,35 @@ const UserSignup = () => {
             <S.SignFormLogin id="formLogUp" action="#">
               <S.SignInput
                 type="text"
-                name="first-name"
-                id="first-name"
+                id="formname"
                 placeholder="Имя"
+                value={signupData.name}
+                onChange={handleInputChange}
+                name="name"
               />
               <S.SignInput
-                className="modal__input login"
                 type="text"
-                name="login"
-                id="loginReg"
+                id="formlogin"
                 placeholder="Эл. почта"
+                value={signupData.login}
+                onChange={handleInputChange}
+                name="login"
               />
               <S.SignInput
-                className="modal__input password-first"
-                type="password"
+                value={signupData.password}
+                onChange={handleInputChange}
                 name="password"
-                id="passwordFirst"
+                type="password"
+                id="formpassword"
                 placeholder="Пароль"
               />
-              <S.SignBtnEnt id="SignUpEnter">
+              {error && <p>{error}</p>}
+              <S.SignBtnEnt id="SignUpEnter" onClick={handleSignup}>
                 <Link>Зарегистрироваться</Link>
               </S.SignBtnEnt>
               <S.SignFromGroup>
                 <p>
-                  Уже есть аккаунт?{" "}
-                  <Link onClick={goToLogin}>
-                    Войдите здесь
-                  </Link>
+                  Уже есть аккаунт? <Link to={"/login"}>Войдите здесь</Link>
                 </p>
               </S.SignFromGroup>
             </S.SignFormLogin>
